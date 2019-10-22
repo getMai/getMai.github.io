@@ -1,0 +1,79 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Hexo 3.9.0"><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><meta name="keywords" content="麦同学, 不懂电脑的麦同学"><meta name="description"><title>安装Windows（以Win 10为例） | 不懂电脑的麦同学</title><link rel="icon" href="/images/icons/favicon-16x16.png?v=1.5.3" type="image/png" sizes="16x16"><link rel="icon" href="/images/icons/favicon-32x32.png?v=1.5.3" type="image/png" sizes="32x32"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=1.5.3"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/',
+  algolia: undefined,
+  fontawesome: {"prefix":"fa"},
+  sidebar: {"offsetTop":"30px","renderTocDepth":4},
+  back2top: {"enable":true},
+  reward: false,
+  fancybox: false,
+  zoom_image: {"enable":true,"mask_color":"rgba(0,0,0,0.6)"},
+  gallery_waterfall: undefined,
+  lazyload: undefined,
+  pjax: undefined,
+  external_link: {"icon":{"enable":true,"name":"external-link"}},
+  shortcuts: {"switch_post":false},
+  prompt: {"copy_success":"复制成功","copy_error":"复制失败","creative_commons":"知识共享","copy_button":"点击复制"}
+};
+
+window.CONFIG = CONFIG;</script></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav"><div class="header-nav-inner"><div class="header-nav-btn fa fa-bars"></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__a" href="/"><i class="fa fa-home"></i>首页</a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__a" href="/archives/"><i class="fa fa-folder-open"></i>归档</a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__a" href="/categories/"><i class="fa fa-th"></i>分类</a></div></div></div></nav><div class="header-info"><div class="header-info-inner"><div class="header-info-title">不懂电脑的麦同学</div><div class="header-info-subtitle"></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content"><div class="post"><header class="post-header"><h1 class="post-header-title">安装Windows（以Win 10为例）</h1><div class="post-header-meta"><span class="post-header-meta-create"><i class="fa fa-calendar-o"></i><span>发表于 </span><span>2019-10-14</span></span><span class="post-header-meta-update"><i class="fa fa-calendar-check-o"></i><span>更新于 </span><span>2019-10-15</span></span></div></header><div class="post-body"><ol>
+<li><h1 id="前言"><span class="heading-link">前言</span></h1><ul>
+<li><h2 id="编写原因："><span class="heading-link">编写原因：</span></h2><ul>
+<li>经常有人找我帮忙装系统，大多数空闲的时候很乐意，可经常是我前脚装完，和他们说完注意事项，他们马上就把系统又搞崩了，又来找我，更有甚者把我当工具人，电脑出了问题就来找我，等我认真解答完呢，人一声不吭就走了，就像突然猝死了一样。所以，我决定写这篇文章，让他们能自食其力，不要再来烦我。</li>
+</ul>
+</li>
+<li><h2 id="面向受众："><span class="heading-link">面向受众：</span></h2><ul>
+<li>具有一定电脑操作基础的普通人：<ul>
+<li>会正常开关机（电脑）；</li>
+<li>知道我说的左键右键是什么东西的左右键，而且知道什么时候要选中一个文件才使用左右键，什么时候不用选中文件而是直接使用左右键；</li>
+<li>知道我说的选择是要进行什么操作；</li>
+<li>知道什么是进度条；</li>
+<li>知道什么是格式化；</li>
+<li>知道什么时分区；</li>
+<li>会使用浏览器。</li>
+</ul>
+</li>
+<li>至今为止连操作系统都不会装的，学习和计算机相关专业的同学；</li>
+<li>像我一样闲的没事就喜欢折腾电脑的。</li>
+<li>后面两个的受众默认具有受众1的水平，如果没有，这篇文章帮不了你，请移步更好的文章。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h1 id="准备阶段"><span class="heading-link">准备阶段</span></h1><ul>
+<li><h2 id="所需工具"><span class="heading-link">所需工具</span></h2><p>（1）一台能正常使用的电脑（Windows 系统），准备阶段都在这台电脑上操作；</p>
+<p>（2）一台需要安装操作系统的电脑（可以是系统有问题，但绝不能是硬件有问题），安装阶段都在这台电脑操作；</p>
+<p>（3）一个16G（最小需要8G，更大的不推荐）的空U盘（制作系统盘会格式化U盘）；</p>
+<p>（4）U盘启动制作工具 ；</p>
+<p>（5）操作系统ISO镜像。</p>
+</li>
+<li><h2 id="制作启动U盘（以下三种方法任选一种，推荐第一种）"><span class="heading-link">制作启动U盘（以下三种方法任选一种，推荐第一种）</span></h2><ul>
+<li><h3 id="使用WinPE制作启动U盘"><span class="heading-link">使用WinPE制作启动U盘</span></h3><p>（1）查看当前电脑为 64位 还是 32位 （如下图所示）：</p>
+<p><img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/Image/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/Win10%E5%AE%89%E8%A3%8501-%E6%9F%A5%E7%9C%8B%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%BD%8D%E6%95%B0.png" alt="查看系统位数"></p>
+<p>（2）下载WinPE，官方下载地址： <span class="external-link"><a href="http://www.wepe.com.cn/download.html" target="_blank" rel="noopener">http://www.wepe.com.cn/download.html</a><i class="fa fa-external-link"></i></span> ，这是中文的网站，如果看不懂可以关闭这篇文章了（如下图所示）：</p>
+<p>（3）将准备好的U盘接入电脑，然后打开WinPE，准备开始制作启动盘（如下图所示）：</p>
+<p>（4）打开WinPE，选择“安装到U盘”（如下图所示）：</p>
+<p>（5）在弹出的窗口中选择要做成启动盘的U盘，然后选择“立即安装进U盘”（如下图所示）：</p>
+<p>（6）等待进度条跑完，启动盘就制作完成了，此时U盘会被分为两个区，一个EFI分区存放启动文件，这个分区的文件不要动，另一个分区则可以存放文件（后面需要将ISO文件放到这里）（如下图所示）：</p>
+</li>
+<li><h3 id="使用Win-10易升制作启动U盘（仅可做Win-10启动盘）"><span class="heading-link">使用Win 10易升制作启动U盘（仅可做Win 10启动盘）</span></h3><p>（1）下载Win 10易升，官方下载地址： <span class="external-link"><a href="https://www.microsoft.com/zh-cn/software-download/windows10" target="_blank" rel="noopener">https://www.microsoft.com/zh-cn/software-download/windows10</a><i class="fa fa-external-link"></i></span> </p>
+</li>
+<li><h3 id="使用Rufus-ISO文件制作启动U盘"><span class="heading-link">使用Rufus + ISO文件制作启动U盘</span></h3></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h1 id="安装阶段"><span class="heading-link">安装阶段</span></h1><ul>
+<li><h2 id="使用U盘启动"><span class="heading-link">使用U盘启动</span></h2></li>
+<li><h2 id="数据备份"><span class="heading-link">数据备份</span></h2></li>
+<li><h2 id="硬盘分区"><span class="heading-link">硬盘分区</span></h2></li>
+<li><h2 id="开始安装"><span class="heading-link">开始安装</span></h2></li>
+</ul>
+</li>
+<li><h1 id="软件推荐及注意事项"><span class="heading-link">软件推荐及注意事项</span></h1><ul>
+<li><h2 id="软件推荐"><span class="heading-link">软件推荐</span></h2></li>
+<li><h2 id="注意事项"><span class="heading-link">注意事项</span></h2></li>
+</ul>
+</li>
+</ol>
+</div><footer class="post-footer"><div class="post-end"><span>------ </span><span>本文结束，感谢您的阅读</span><span> ------</span></div><div class="post-copyright"><div class="post-copyright-author"><span class="post-copyright-author-name">本文作者: </span><span class="post-copyright-author-value"><a href="http://mairf.cn">麦同学</a></span></div><div class="post-copyright-link"><span class="post-copyright-link-name">本文链接: </span><span class="post-copyright-link-value"><a href="http://mairf.cn/2019/10/14/安装Windows/">http://mairf.cn/2019/10/14/安装Windows/</a></span></div><div class="post-copyright-notice"><span class="post-copyright-notice-name">版权声明: </span><span class="post-copyright-notice-value">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> 许可协议。转载请注明出处！</span></div></div><nav class="paginator"><div class="paginator-post"><div class="paginator-post-next"><a class="paginator-post-next__a" href="/2019/10/14/本站说明/"><span>本站说明</span><i class="fa fa-chevron-right"></i></a></div></div></nav></footer></div></div></div><aside class="sidebar" id="sidebar"><div class="sidebar-inner"><div class="sidebar-nav"><span class="sidebar-nav-toc current">文章目录</span><span class="sidebar-nav-ov">站点概览</span></div><section class="sidebar-toc"><div><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#编写原因："><span class="toc-number">1.1.</span> <span class="toc-text">编写原因：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#面向受众："><span class="toc-number">1.2.</span> <span class="toc-text">面向受众：</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#准备阶段"><span class="toc-number">2.</span> <span class="toc-text">准备阶段</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#所需工具"><span class="toc-number">2.1.</span> <span class="toc-text">所需工具</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#制作启动U盘（以下三种方法任选一种，推荐第一种）"><span class="toc-number">2.2.</span> <span class="toc-text">制作启动U盘（以下三种方法任选一种，推荐第一种）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#使用WinPE制作启动U盘"><span class="toc-number">2.2.1.</span> <span class="toc-text">使用WinPE制作启动U盘</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用Win-10易升制作启动U盘（仅可做Win-10启动盘）"><span class="toc-number">2.2.2.</span> <span class="toc-text">使用Win 10易升制作启动U盘（仅可做Win 10启动盘）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用Rufus-ISO文件制作启动U盘"><span class="toc-number">2.2.3.</span> <span class="toc-text">使用Rufus + ISO文件制作启动U盘</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#安装阶段"><span class="toc-number">3.</span> <span class="toc-text">安装阶段</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#使用U盘启动"><span class="toc-number">3.1.</span> <span class="toc-text">使用U盘启动</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数据备份"><span class="toc-number">3.2.</span> <span class="toc-text">数据备份</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#硬盘分区"><span class="toc-number">3.3.</span> <span class="toc-text">硬盘分区</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#开始安装"><span class="toc-number">3.4.</span> <span class="toc-text">开始安装</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#软件推荐及注意事项"><span class="toc-number">4.</span> <span class="toc-text">软件推荐及注意事项</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#软件推荐"><span class="toc-number">4.1.</span> <span class="toc-text">软件推荐</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#注意事项"><span class="toc-number">4.2.</span> <span class="toc-text">注意事项</span></a></li></ol></li></ol></div></section><!-- ov = overview --><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="/images/Avatar_002.png" alt="avatar"></div><p class="sidebar-ov-author__p">有问题为什么不先问问神奇海螺呢？</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social__item" href="https://github.com/getMai" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><i class="sidebar-ov-social__item--icon fa fa-github"></i></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state__a posts" href="/archives/"><div class="sidebar-ov-state__a--count">2</div><div class="sidebar-ov-state__a--name">归档</div></a><a class="sidebar-ov-state__a categories" href="/categories/"><div class="sidebar-ov-state__a--count">2</div><div class="sidebar-ov-state__a--name">分类</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg" alt="知识共享"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span>你已阅读了 </span><span class="sidebar-reading-info-num">0</span></div><div class="sidebar-reading-line"></div></div></div></aside><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>&copy; 2019</span><span class="fa fa-heart footer-icon"></span><span>麦同学.</span></div><div><span>由 <a href="http://hexo.io/" title="hexo" target="_blank" rel="noopener">hexo</a> 强力驱动</span><span> v3.9.0.</span><span class="separator">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="stun" target="_blank" rel="noopener">stun</a></span><span> v1.5.3.</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="progress"></div></div><div class="back2top" id="back2top"><i class="back2top-icon fa fa-rocket"></i></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-nest@latest/canvas-nest.min.js" color="0 , 255 , 249" opacity="0.6" count="99" zindex="-1"></script><script src="/js/utils.js?v=1.5.3"></script><script src="/js/stun-boot.js?v=1.5.3"></script><script src="/js/scroll.js?v=1.5.3"></script><script src="/js/header.js?v=1.5.3"></script><script src="/js/sidebar.js?v=1.5.3"></script></body></html>
