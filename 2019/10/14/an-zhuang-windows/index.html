@@ -1,0 +1,1213 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="安装Windows（以Win 10为例）, 不懂电脑的麦同学">
+    <meta name="description" content="前言编写原因：
+经常有人找我帮忙装系统，大多数空闲的时候很乐意且不计较得失，可经常是我前脚装完，和他们说完注意事项，他们马上就把系统又搞崩了，又来找我，更有甚者把我当工具人，电脑出了问题就来找我，等我认真解答完呢，人一声不吭就走了，就像突然">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>安装Windows（以Win 10为例） | 不懂电脑的麦同学</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    
+    <script src="/libs/jquery/jquery.min.js"></script>
+    
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper head-container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">不懂电脑的麦同学</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">不懂电脑的麦同学</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/getMai" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/getMai" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <div class="description center-align post-title">
+                        安装Windows（以Win 10为例）
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Windows/">
+                                <span class="chip bg-color">Windows</span>
+                            </a>
+                        
+                            <a href="/tags/操作系统/">
+                                <span class="chip bg-color">操作系统</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/操作系统/" class="post-category">
+                                操作系统
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2019-10-14
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2019-11-19
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    3.9k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    13 分
+                </div>
+                
+				
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+            
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h3 id="编写原因："><a href="#编写原因：" class="headerlink" title="编写原因："></a>编写原因：</h3><ul>
+<li>经常有人找我帮忙装系统，大多数空闲的时候很乐意且不计较得失，可经常是我前脚装完，和他们说完注意事项，他们马上就把系统又搞崩了，又来找我，更有甚者把我当工具人，电脑出了问题就来找我，等我认真解答完呢，人一声不吭就走了，就像突然猝死了一般。所以，我决定写这篇文章，让他们能自食其力，不要再来烦我。老一辈或者有了家室没时间学习的人除外，他们来找我我一样会帮，但和我同龄的你有什么理由能一直来找我帮你呢（偶尔来且态度好我可以接受）？如果你嫌麻烦，那我呢？如果你不嫌麻烦，为何不自己动手呢？</li>
+</ul>
+<h3 id="面向受众："><a href="#面向受众：" class="headerlink" title="面向受众："></a>面向受众：</h3><ul>
+<li>具有一定电脑操作基础的普通人（受众1）：<ul>
+<li>会正常开关机（电脑）；</li>
+<li>知道我说的左键右键是什么东西的左右键，而且知道什么时候要选中一个文件才使用左右键，什么时候不用选中文件而是直接使用左右键；</li>
+<li>知道我说的选择是要进行什么操作；</li>
+<li>知道什么是进度条；</li>
+<li>知道什么是格式化；</li>
+<li>知道什么时分区；</li>
+<li>会使用浏览器。</li>
+</ul>
+</li>
+<li>至今为止连操作系统都不会装的，学习和计算机相关专业的同学（受众2）；</li>
+<li>像我一样闲的没事就喜欢折腾电脑的（受众3）。</li>
+<li>后面两个的受众默认具有受众1的水平，如果没有，这篇文章帮不了你，请移步更好的文章。</li>
+</ul>
+<h2 id="准备阶段"><a href="#准备阶段" class="headerlink" title="准备阶段"></a>准备阶段</h2><h3 id="所需工具"><a href="#所需工具" class="headerlink" title="所需工具"></a>所需工具</h3><p>  （1）一台能正常使用的电脑（Windows 系统），准备阶段都在这台电脑上操作；</p>
+<p>  （2）一台需要安装操作系统的电脑（可以是系统有问题，但绝不能是硬件有问题），安装阶段都在这台电脑操作；</p>
+<p>  （3）一个16G（最小需要8G，更大的不推荐）的空U盘（制作系统盘会格式化U盘）；</p>
+<p>  （4）U盘启动制作工具 ；</p>
+<p>  （5）操作系统ISO镜像。</p>
+<p>  （6）一个500G及以上的移到硬盘（非必需，具体看下面安装阶段的备份数据阶段）</p>
+<h3 id="制作启动U盘（以下三种方法任选一种，推荐第一种）"><a href="#制作启动U盘（以下三种方法任选一种，推荐第一种）" class="headerlink" title="制作启动U盘（以下三种方法任选一种，推荐第一种）"></a>制作启动U盘（以下三种方法任选一种，推荐第一种）</h3><h4 id="使用WinPE制作启动U盘"><a href="#使用WinPE制作启动U盘" class="headerlink" title="使用WinPE制作启动U盘"></a>使用WinPE制作启动U盘</h4><p>  （1）查看当前电脑为 64位 还是 32位 （如下图所示）：<img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/%E5%AE%89%E8%A3%85Win10%E7%B3%BB%E7%BB%9F/01-%E6%9F%A5%E7%9C%8B%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%BD%8D%E6%95%B0.png" alt="查看操作系统位数"></p>
+<p>  （2）下载WinPE，官方下载地址： <a href="http://www.wepe.com.cn/download.html" target="_blank" rel="noopener">http://www.wepe.com.cn/download.html</a> ，这是中文的网站，如果看不懂可以关闭这篇文章了（如下图所示）：<img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/%E5%AE%89%E8%A3%85Win10%E7%B3%BB%E7%BB%9F/02-%E4%B8%8B%E8%BD%BDwinpe.png" alt="下载WinPE"></p>
+<p>  （3）将准备好的U盘接入电脑，然后打开WinPE，准备开始制作启动盘：</p>
+<p>  （4）打开WinPE，选择“安装到U盘”（如下图所示）：<img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/%E5%AE%89%E8%A3%85Win10%E7%B3%BB%E7%BB%9F/03-%E5%AE%89%E8%A3%85%E5%88%B0U%E7%9B%98.png" alt="打开WinPE，选择安装到U盘"></p>
+<p>（5）在弹出的窗口中选择要做成启动盘的U盘，然后选择“立即安装进U盘”（如下图所示）：<img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/%E5%AE%89%E8%A3%85Win10%E7%B3%BB%E7%BB%9F/04-%E5%AE%89%E8%A3%85%E5%88%B0U%E7%9B%982.png" alt="WinPE立即安装到U盘"></p>
+<p>（6）等待进度条跑完，启动盘就制作完成了，此时U盘会被分为两个区，一个EFI分区存放启动文件，这个分区的文件不要动，另一个分区则可以存放文件（后面需要将ISO文件放到这里）（如下图所示）：<img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/%E5%AE%89%E8%A3%85Win10%E7%B3%BB%E7%BB%9F/05-WInPE%E5%88%B6%E4%BD%9C%E5%90%AF%E5%8A%A8%E7%9B%98%E6%88%90%E5%8A%9F.png" alt="WinPE完成制作"></p>
+<h4 id="使用Win-10易升制作启动U盘（仅可做Win-10启动盘）"><a href="#使用Win-10易升制作启动U盘（仅可做Win-10启动盘）" class="headerlink" title="使用Win 10易升制作启动U盘（仅可做Win 10启动盘）"></a>使用Win 10易升制作启动U盘（仅可做Win 10启动盘）</h4><p>  （1）下载Win 10易升，官方下载地址： <a href="https://www.microsoft.com/zh-cn/software-download/windows10" target="_blank" rel="noopener">https://www.microsoft.com/zh-cn/software-download/windows10</a> （如下图所示）：<img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/%E5%AE%89%E8%A3%85Win10%E7%B3%BB%E7%BB%9F/07-%E4%B8%8B%E8%BD%BDWin10%E6%98%93%E5%8D%87.png" alt="下载Win10易升"></p>
+<p>  （2）打开Win10易升，Win10易升会进行准备工作，等待一段时间（如下图所示）：<img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/%E5%AE%89%E8%A3%85Win10%E7%B3%BB%E7%BB%9F/08-Win10%E6%98%93%E5%8D%87%E5%8A%A0%E8%BD%BD.png" alt="Win10易升加载"></p>
+<p>  （3）在弹出的窗口选择“接受”选项（如下图所示）：<img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/%E5%AE%89%E8%A3%85Win10%E7%B3%BB%E7%BB%9F/08-Win10%E6%98%93%E5%8D%87%E6%8E%A5%E5%8F%97.png" alt="接受易升许可"></p>
+<p>  （4）选择“为另一台电脑创建安装介质……”，然后下一步（如下图所示）：<img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/%E5%AE%89%E8%A3%85Win10%E7%B3%BB%E7%BB%9F/09-Win10%E6%98%93%E5%8D%87%E4%B8%BA%E5%85%B6%E4%BB%96%E7%94%B5%E8%84%91.png" alt="易升为其他电脑创建介质"></p>
+<p>  （5）选择Win10版本，然后下一步（如下图所示）：<img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/%E5%AE%89%E8%A3%85Win10%E7%B3%BB%E7%BB%9F/10-%E9%80%89%E6%8B%A9%E7%89%88%E6%9C%AC.png" alt="易升选择Win10版本"></p>
+<p>  （6）介质选择U盘，然后下一步（如下图所示）：<img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/%E5%AE%89%E8%A3%85Win10%E7%B3%BB%E7%BB%9F/11-%E9%80%89%E6%8B%A9U%E7%9B%98.png" alt="易升选择介质"></p>
+<p>  （7）选择要制作成启动盘的U盘，然后下一步（如下图所示）：<img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/%E5%AE%89%E8%A3%85Win10%E7%B3%BB%E7%BB%9F/13-%E9%80%89%E6%8B%A9U%E7%9B%98.png" alt="易升选择U盘"></p>
+<p>  （8）接下来，Win10易升将进行下载Win10并写入U盘，我们只需等待其完成，时间长短由当前PC性能及网络性能决定（如下图所示）：<img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/%E5%AE%89%E8%A3%85Win10%E7%B3%BB%E7%BB%9F/14-%E7%AD%89%E5%BE%85%E5%AE%8C%E6%88%90.png" alt="易升等待下载"></p>
+<h4 id="使用Rufus-ISO文件制作启动U盘"><a href="#使用Rufus-ISO文件制作启动U盘" class="headerlink" title="使用Rufus + ISO文件制作启动U盘"></a>使用Rufus + ISO文件制作启动U盘</h4><p>  （1）下载Rufus，官方下载地址： <a href="https://rufus.ie/" target="_blank" rel="noopener">https://rufus.ie</a> </p>
+<p>  （2）进入官网，更换网站语言（如果看得懂英文可以忽略）（如下图所示）：<img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/%E5%AE%89%E8%A3%85Win10%E7%B3%BB%E7%BB%9F/15-Rufus%E7%BD%91%E7%AB%99%E6%9B%B4%E6%94%B9%E8%AF%AD%E8%A8%80.png" alt="Rufus官网设置中文"></p>
+<p>  （3）在网站首页往下滑，会有个三个下载链接，选择第一个即可（如下图所示）：<img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/%E5%AE%89%E8%A3%85Win10%E7%B3%BB%E7%BB%9F/16-%E4%B8%8B%E8%BD%BDRufus.png" alt="下载Rufus"></p>
+<p>  （4）下载ISO镜像文件，这里通过Win10易升下载。参照使用Win10易升制作启动盘的方法，只需要在步骤（6）选择介质那里将“U盘”改成“ISO文件”，然后等待其下载完成即可（如下图所示）：<img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/%E5%AE%89%E8%A3%85Win10%E7%B3%BB%E7%BB%9F/12-%E4%B8%8B%E8%BD%BD%E9%95%9C%E5%83%8F.png" alt="易升下载Win10 ISO镜像文件"></p>
+<p>  （7）打开Rufus，按照下图进行操作（如下图所示）：<img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/%E5%AE%89%E8%A3%85Win10%E7%B3%BB%E7%BB%9F/17-Rufus%E5%88%B6%E4%BD%9C%E5%90%AF%E5%8A%A8%E7%9B%98%E8%AE%BE%E7%BD%AE.png" alt="Rufs制作启动盘设置"></p>
+<p>  （8）这是会弹出一个警告窗口，点击“确定即可”（如下图所示）：<img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/%E5%AE%89%E8%A3%85Win10%E7%B3%BB%E7%BB%9F/18-Rufus%E8%AD%A6%E5%91%8A.png" alt="Rufus弹窗警告"></p>
+<p>  （9）等待进度条跑完即可，时间长短由PC性能及U盘性能决定（如下图所示）：<img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/%E5%AE%89%E8%A3%85Win10%E7%B3%BB%E7%BB%9F/19-Rufus%E5%88%B6%E4%BD%9C%E5%AE%8C%E6%88%90.png" alt="Rufus安装制作启动盘过程"></p>
+<h4 id="三个方法对比及各Windows系统下载地址："><a href="#三个方法对比及各Windows系统下载地址：" class="headerlink" title="三个方法对比及各Windows系统下载地址："></a>三个方法对比及各Windows系统下载地址：</h4><p>  （1）方法一制作速度快，且适用于几乎所有Windows系统的安装，但它本身不携带任何ISO镜像文件，需要另行下载，然后移到到启动盘中，才可以进行安装；</p>
+<p>  （2）方法二为微软官方的Win10启动盘制作方法，是个纯净的系统，但只能制作Win10的启动盘；</p>
+<p>  （3）这里的方法三与方法二最后的结果使用一样的，但是方法三可以通过不同的ISO镜像文件将U盘制作成不同的启动盘，包括Liunx各发行版的启动盘；</p>
+<p>  （4）各Windows系统下载地址：MSDN： <a href="https://msdn.itellyou.cn/" target="_blank" rel="noopener">https://msdn.itellyou.cn/</a> ，它不只有操作系统还有其他微软发行的软件，比如Office，但是，这些只是镜像，激活需要寻找其他方法，比如通过微软官方购买。（如下图所示）：<img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/%E5%AE%89%E8%A3%85Win10%E7%B3%BB%E7%BB%9F/20-MSDN.png" alt="MSDN官方网站"></p>
+<h2 id="安装阶段"><a href="#安装阶段" class="headerlink" title="安装阶段"></a>安装阶段</h2><h3 id="设置电脑通过U盘启动"><a href="#设置电脑通过U盘启动" class="headerlink" title="设置电脑通过U盘启动"></a>设置电脑通过U盘启动</h3><p>  （1）关闭电脑，然后将U盘（启动盘）接入电脑（注意顺序）</p>
+<p>  （2）点亮电脑（也就是按电源键电源键开机，等电源键一亮），然后一直点击“F2”键进入BIOS设置（是“F2”键，不是“F”键+“2”键，“F2”只是我这台电脑进入BIOS的方式，不代表所有电脑，一般为“Esc”键、“F2”键、“F12”键，如果都不行，请自行使用搜索引擎搜索自己电脑进入BIOS的方式，笔记本搜型号，台式机搜主板型号）</p>
+<p>  （3）然后会进入BIOS系统（大多数BIOS界面和我的差不多，一般都是键盘上的上下左右四个键移动，回车键选中，一般会有操作说明）找到“Boot”，然后设置“Boot Option #1”（即第一栏）为UEFI：…… USB ……（差不多这个格式，会有个USB，表示通过USB方式启动，也就是通过启动U盘启动，如下图所示）：<img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/%E5%AE%89%E8%A3%85Win10%E7%B3%BB%E7%BB%9F/21-1-%E8%AE%BE%E7%BD%AEU%E7%9B%98%E5%90%AF%E5%8A%A8%E4%B8%BA%E9%A6%96%E9%80%89%E9%A1%B9.jpg" alt="BIOS设置U盘启动为首选项"></p>
+<p>  （4）设置完后，找到“Exit”，然后选中“Save Changes and Reset”，保存设置并重新启动（如下图所示）：<img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/%E5%AE%89%E8%A3%85Win10%E7%B3%BB%E7%BB%9F/21-2-%E4%BF%9D%E5%AD%98%E5%B9%B6%E9%87%8D%E5%90%AF.jpg" alt></p>
+<p>  （5）等待重启后，会自动进入PE系统（使用方法一来制作启动盘才会进入PE，方法二和方法三会直接进入Win10 安装模式，PE界面如下图所示）：<img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/%E5%AE%89%E8%A3%85Win10%E7%B3%BB%E7%BB%9F/21-3-%E8%BF%9B%E5%85%A5PE.png" alt="PE桌面"></p>
+<p>  （6）至此，U盘启动设置完成，接下来进行数据备份及硬盘分区</p>
+<h3 id="数据备份"><a href="#数据备份" class="headerlink" title="数据备份"></a>数据备份</h3><p>  （1）如果有需要进行备份的东西，则执行这一步，如果没有可以跳过</p>
+<p>  （2）首先打开PE系统桌面上的“分区助手”，确定要安装操作系统的硬盘是GPT格式（如下图所示）：<img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/%E5%AE%89%E8%A3%85Win10%E7%B3%BB%E7%BB%9F/22-%E8%BD%AC%E6%8D%A2%E7%A1%AC%E7%9B%98%E6%A0%BC%E5%BC%8F%E4%BD%BF%E7%94%A8%E8%BD%AF%E4%BB%B6.png" alt="确定硬盘为GPT格式"></p>
+<p>  （3）如果不是GPT格式，就需要将其转换为GPT格式，但在转换之前，需要将要备份的资料移动到另一个硬盘上，如果电脑上有两个硬盘，直接移到到另一个硬盘即可，如果只有一个硬盘，就需要用到移动硬盘了。将所有资料备份好后再进行硬盘的格式转换。</p>
+<p>  （4）数据备份完成后，将硬盘转换成GPT格式（具体步骤如下图所示）：<img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/%E5%AE%89%E8%A3%85Win10%E7%B3%BB%E7%BB%9F/23-%E8%BD%AC%E6%8D%A2%E7%A1%AC%E7%9B%98%E6%A0%BC%E5%BC%8F.png" alt="转换硬盘格式为GPT"></p>
+<p>  （4）至此，数据备份完成，接着进行硬盘分区及开始进行系统安装</p>
+<h3 id="硬盘分区"><a href="#硬盘分区" class="headerlink" title="硬盘分区"></a>硬盘分区</h3><p>  （1）打开PE系统桌面上的“分区工具Disk……”</p>
+<p>  （2）选中你要安装系统的硬盘，右键 -&gt; 删除所有分区（因为我见过的许多电脑的分区很奇怪，所以我这里将重新进行分区），然后保存更改（注意！这个操作讲清楚硬盘上所有设置。具体操作如下图所示）：<img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/%E5%AE%89%E8%A3%85Win10%E7%B3%BB%E7%BB%9F/24-1-%E5%88%A0%E9%99%A4%E6%89%80%E6%9C%89%E5%88%86%E5%8C%BA.png" alt="删除所有分区"></p>
+<p>  （3）分区方案如下表（仅供参考，与个人实际用途和喜欢相关）：</p>
+<table>
+<thead>
+<tr>
+<th align="center">硬盘大小</th>
+<th align="center">系统盘（C盘）</th>
+<th align="center">非系统盘（D盘）</th>
+<th align="center">非系统盘（E盘）</th>
+<th align="center">非系统盘（F盘）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">128G及以下</td>
+<td align="center">128G</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">-</td>
+</tr>
+<tr>
+<td align="center">256G</td>
+<td align="center">128G</td>
+<td align="center">128G</td>
+<td align="center">-</td>
+<td align="center">-</td>
+</tr>
+<tr>
+<td align="center">512G</td>
+<td align="center">128G</td>
+<td align="center">184G</td>
+<td align="center">200G</td>
+<td align="center">-</td>
+</tr>
+<tr>
+<td align="center">1024G（也就是1T）</td>
+<td align="center">256G</td>
+<td align="center">256G</td>
+<td align="center">256G</td>
+<td align="center">256G</td>
+</tr>
+</tbody></table>
+<p>  （4）删除所有分区并保存后，硬盘会显示为“空闲”状态，颜色会变成灰色，因为我的硬盘有资料，所以使用U盘来作为示例，故只有14G空闲空间（如下图所示）：<img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/%E5%AE%89%E8%A3%85Win10%E7%B3%BB%E7%BB%9F/25-%E4%BF%9D%E5%AD%98%E5%88%86%E5%8C%BA.png" alt="空闲状态"></p>
+<p>  （5）选中空闲空间，然后开始进行分区（具体步骤如下图所示）：<img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/%E5%AE%89%E8%A3%85Win10%E7%B3%BB%E7%BB%9F/24-2-%E5%BB%BA%E7%AB%8B%E6%96%B0%E5%88%86%E5%8C%BA.png" alt="开始新建分区"></p>
+<p>  （6）在弹出的窗口对新分区进行一些设置（对所有分区都使用相同的设置，具体操作如下图所示）：<img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/%E5%AE%89%E8%A3%85Win10%E7%B3%BB%E7%BB%9F/24-3-%E6%96%B0%E5%88%86%E5%8C%BA%E8%AE%BE%E7%BD%AE.png" alt="新建分区设置"></p>
+<p>  （7）建立完所有分区后，保存更改（具体操作如下图所示）：<img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/%E5%AE%89%E8%A3%85Win10%E7%B3%BB%E7%BB%9F/24-4-%E4%BF%9D%E5%AD%98%E6%9B%B4%E6%94%B9.png" alt="保存更改"></p>
+<p>  （8）在弹出的窗口中选“是”（如下图所示）：<img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/%E5%AE%89%E8%A3%85Win10%E7%B3%BB%E7%BB%9F/24-5-%E7%A1%AE%E5%AE%9A%E6%9B%B4%E6%94%B9.png" alt="确认操作"></p>
+<p>  （9）选中要安装系统的那个分区，再次删除此分区，使其变成空闲状态，然后保存更改（如下图所示）：<img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/%E5%AE%89%E8%A3%85Win10%E7%B3%BB%E7%BB%9F/24-6-%E7%A1%AC%E7%9B%98%E5%88%86%E5%8C%BA.png" alt="再次删除分区"></p>
+<p>  （10）至此，分区完成，接下来进行最后一步 —— 安装</p>
+<h3 id="开始安装"><a href="#开始安装" class="headerlink" title="开始安装"></a>开始安装</h3><p>  （1）确保你已经将下载好的ISO镜像文件移到到启动盘中</p>
+<p>  （2）找到ISO镜像文件，双击打开，在弹出来的窗口中找到“setup.exe”，双击打开（如下图所示）：<img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/%E5%AE%89%E8%A3%85Win10%E7%B3%BB%E7%BB%9F/26-%E6%89%93%E5%BC%80Win10%E5%AE%89%E8%A3%85%E7%A8%8B%E5%BA%8F.png" alt="打开Win10安装程序"></p>
+<p>  （3）Win10将开始进行安装，这时Win10安装程序将会加载一段时间，等待即可（如下图所示）：<img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/%E5%AE%89%E8%A3%85Win10%E7%B3%BB%E7%BB%9F/28-%E7%AD%89%E5%BE%85%E5%8A%A0%E8%BD%BD.png" alt="等待加载"></p>
+<p>  （4）加载完后，第一个设置就是整个系统的显示语言及时间格式（也就是时区），这里我都选择中文，键盘输入方式则选择“微软拼音”，接下来的界面将是连续的，跟着我的步骤和图片来即可（如下图所示）：<img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/%E5%AE%89%E8%A3%85Win10%E7%B3%BB%E7%BB%9F/29-Win10%E8%AE%BE%E7%BD%AE.png" alt="设置系统语言、时间及键盘输入方式"></p>
+<p>  （5）选择“现在安装”（如下图所示）：<img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/%E5%AE%89%E8%A3%85Win10%E7%B3%BB%E7%BB%9F/30-%E7%8E%B0%E5%9C%A8%E5%AE%89%E8%A3%85.png" alt="选择现在安装"></p>
+<p>  （6）选择“我没有密钥”（如下图所示）：<img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/%E5%AE%89%E8%A3%85Win10%E7%B3%BB%E7%BB%9F/31-%E6%B2%A1%E6%9C%89%E5%AF%86%E9%92%A5.png" alt="选择没有密钥"></p>
+<p>  （7）选择“家庭版”（生活娱乐及普通办公足够，做开发就推荐专业版）（如下图所示）：<img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/%E5%AE%89%E8%A3%85Win10%E7%B3%BB%E7%BB%9F/32-%E9%80%89%E6%8B%A9%E7%89%88%E6%9C%AC.png" alt="选择要安装的版本"></p>
+<p>  （8）勾选“我接受……”，然后下一步（如下图所示）：<img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/%E5%AE%89%E8%A3%85Win10%E7%B3%BB%E7%BB%9F/33-%E6%8E%A5%E5%8F%97%E5%AE%89%E8%A3%85%E5%8D%8F%E8%AE%AE.png" alt="接受许可条款"></p>
+<p>  （9）选择“自定义安装”（如下图所示）：<img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/%E5%AE%89%E8%A3%85Win10%E7%B3%BB%E7%BB%9F/34-%E6%89%A7%E8%A1%8C%E6%96%B9%E5%BC%8F.png" alt="选择自定义安装"></p>
+<p>  （10）选择刚才删除分区，状态为空闲的那块硬盘空间，然后下一步（如下图所示）：<img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/%E5%AE%89%E8%A3%85Win10%E7%B3%BB%E7%BB%9F/35-%E9%80%89%E6%8B%A9%E7%A3%81%E7%9B%98.png" alt="选择磁盘空间"></p>
+<p>  （11）接着安装程序就会开始安装，等待即可（如下图所示）：<img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/%E5%AE%89%E8%A3%85Win10%E7%B3%BB%E7%BB%9F/36-%E7%AD%89%E5%BE%85.png" alt="等待安装"></p>
+<p>  （12）安装完成后，会开始一些配置，首先是区域，这里选中国（如下图所示）：<img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/%E5%AE%89%E8%A3%85Win10%E7%B3%BB%E7%BB%9F/37-%E9%80%89%E6%8B%A9%E5%8C%BA%E5%9F%9F.png" alt="设置区域"></p>
+<p>  （13）选择择“微软拼音”（如下图所示）：<img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/%E5%AE%89%E8%A3%85Win10%E7%B3%BB%E7%BB%9F/38-%E9%94%AE%E7%9B%98%E5%B8%83%E5%B1%80.png" alt="设置键盘布局"></p>
+<p>  （14）直接跳过（如下图所示）：<img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/%E5%AE%89%E8%A3%85Win10%E7%B3%BB%E7%BB%9F/39-%E7%AC%AC%E4%BA%8C%E7%A7%8D%E9%94%AE%E7%9B%98%E5%B8%83%E5%B1%80.png" alt="第二种键盘布局"></p>
+<p>  （15）接着，Win10又会进行一些配置，等待即可（如下图所示）：<img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/%E5%AE%89%E8%A3%85Win10%E7%B3%BB%E7%BB%9F/40-%E7%AD%89%E5%BE%85%E8%AE%BE%E7%BD%AE.png" alt="再次等待安装"></p>
+<p>  （16）接下来会让我们输入一个账户名，这里随便起一个喜欢的名字（它不要求实名），如下图所示）：<img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/%E5%AE%89%E8%A3%85Win10%E7%B3%BB%E7%BB%9F/41-%E5%90%8D%E5%AD%97.png" alt="设置用户名"></p>
+<p>  （17）接着设置登录密码（如下图所示）：<img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/%E5%AE%89%E8%A3%85Win10%E7%B3%BB%E7%BB%9F/42-%E7%99%BB%E5%BD%95%E5%AF%86%E7%A0%81.png" alt="设置登录密码"></p>
+<p>  （18）选择“否”（如下图所示）：<img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/%E5%AE%89%E8%A3%85Win10%E7%B3%BB%E7%BB%9F/43-%E5%8E%86%E5%8F%B2%E8%AE%B0%E5%BD%95.png" alt="设置活动历史记录"></p>
+<p>  （19）选择“拒绝”（如下图所示）：<img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/%E5%AE%89%E8%A3%85Win10%E7%B3%BB%E7%BB%9F/44-%E8%AF%AD%E8%A8%80%E5%8A%A9%E6%89%8B.png" alt="设置数字助理即小娜"></p>
+<p>  （20）关闭所有，然后选择“接受”（如下图所示）：<img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/%E5%AE%89%E8%A3%85Win10%E7%B3%BB%E7%BB%9F/45-%E9%9A%90%E7%A7%81%E8%AE%BE%E7%BD%AE.png" alt="隐私设置"></p>
+<p>  （21）接着Win10再次进行配置，等待即可（如下图所示）：<img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/%E5%AE%89%E8%A3%85Win10%E7%B3%BB%E7%BB%9F/46-%E6%9C%80%E5%90%8E%E8%AE%BE%E7%BD%AE.png" alt="再次等待"></p>
+<p>  （22）等待一段时间后，安装就完成了，也已经进入到系统桌面了（如下图所示）：<img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/%E5%AE%89%E8%A3%85Win10%E7%B3%BB%E7%BB%9F/47-%E5%AE%89%E8%A3%85%E5%AE%8C%E6%88%90.png" alt="安装完成进入桌面"></p>
+<p>  （23）打开设置，找到“更新和安全”，进行系统更新（如下图所示）：<img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/%E5%AE%89%E8%A3%85Win10%E7%B3%BB%E7%BB%9F/48-%E6%9B%B4%E6%96%B0%E7%B3%BB%E7%BB%9F.png" alt="打开更新和安全"></p>
+<p>  （24）点击检查更新以进行系统更新（如下图所示）：<img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/%E5%AE%89%E8%A3%85Win10%E7%B3%BB%E7%BB%9F/49-%E6%9B%B4%E6%96%B0%E7%95%8C%E9%9D%A2.png" alt="联网并检查更新"></p>
+<p>  （25）至此，整个系统安装完毕，接下来的注意事项一定要看！！！</p>
+<h2 id="注意事项及软件推荐"><a href="#注意事项及软件推荐" class="headerlink" title="注意事项及软件推荐"></a>注意事项及软件推荐</h2><h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><h4 id="不要使用各种管家类软件（如xx管家、x大师、xx精灵），原因如下（以下都是以我的经验来说，不一定是对的）："><a href="#不要使用各种管家类软件（如xx管家、x大师、xx精灵），原因如下（以下都是以我的经验来说，不一定是对的）：" class="headerlink" title="不要使用各种管家类软件（如xx管家、x大师、xx精灵），原因如下（以下都是以我的经验来说，不一定是对的）："></a>不要使用各种管家类软件（如xx管家、x大师、xx精灵），原因如下（以下都是以我的经验来说，不一定是对的）：</h4><p>  （1）Win10已经自带了一个安全中心，已经足够使用；</p>
+<p>  （2）这类软件会有一些弹窗广告，有时候还会在后台给你装上它的兄弟姐妹，然后你会拥有更多的弹出广告；</p>
+<p>  （3）这类软件有时候会把一些系统文件当成病毒查杀，然后你的电脑就会出现黑屏、蓝屏等现象（我帮忙重装的电脑都安装了这类软件，而我的电脑没有安装且不会出现这些问题）；</p>
+<p>  （4）要用这类的软件也可以，你要能管住它们，让它们不在你的电脑里瞎搞，这属于大佬的操作，普通人做不到也不愿折腾</p>
+<h4 id="下载软件去它们的官网下，不要随便在一些第三方的网站下载，原因如下："><a href="#下载软件去它们的官网下，不要随便在一些第三方的网站下载，原因如下：" class="headerlink" title="下载软件去它们的官网下，不要随便在一些第三方的网站下载，原因如下："></a>下载软件去它们的官网下，不要随便在一些第三方的网站下载，原因如下：</h4><p>  （1）第三方网站可能已经在这些应用程序的安装包里加入了病毒或者流氓软件，所以有时候你只是安装了一个软件，可等你回到桌面会发现多出一堆快捷方式，而且删不掉；</p>
+<p>  （2）除了安全方面，第三方网站的软件可能也没有官网的版本新</p>
+<h4 id="不要使用国内的浏览器，特别是和那些管家属于同一公司的，原因如下："><a href="#不要使用国内的浏览器，特别是和那些管家属于同一公司的，原因如下：" class="headerlink" title="不要使用国内的浏览器，特别是和那些管家属于同一公司的，原因如下："></a>不要使用国内的浏览器，特别是和那些管家属于同一公司的，原因如下：</h4><p>  （1）Win10已经自带了一个Microsoft Edge浏览器，非常好用正常使用完全足够；</p>
+<p>  （2）你只想安装一个，但它会把它全家都带上</p>
+<h4 id="使用Office来处理Word、Excel、PPT，不要使用某PS，原因如下："><a href="#使用Office来处理Word、Excel、PPT，不要使用某PS，原因如下：" class="headerlink" title="使用Office来处理Word、Excel、PPT，不要使用某PS，原因如下："></a>使用Office来处理Word、Excel、PPT，不要使用某PS，原因如下：</h4><p>  （1）它会更改你的Word文档的格式，你辛辛苦苦排的版可能就这么没了；</p>
+<p>  （2）有弹窗；</p>
+<p>  （3）会把它全家都介绍给你认识，即使你不想</p>
+<h3 id="软件推荐（持续更新，也有可能不更新，因为没有好的推荐）"><a href="#软件推荐（持续更新，也有可能不更新，因为没有好的推荐）" class="headerlink" title="软件推荐（持续更新，也有可能不更新，因为没有好的推荐）"></a>软件推荐（持续更新，也有可能不更新，因为没有好的推荐）</h3><h4 id="解压缩软件：Bandizip，官方下载地址：-https-cn-bandisoft-com-bandizip-；推荐原因如下："><a href="#解压缩软件：Bandizip，官方下载地址：-https-cn-bandisoft-com-bandizip-；推荐原因如下：" class="headerlink" title="解压缩软件：Bandizip，官方下载地址： https://cn.bandisoft.com/bandizip/ ；推荐原因如下："></a>解压缩软件：Bandizip，官方下载地址： <a href="https://cn.bandisoft.com/bandizip/" target="_blank" rel="noopener">https://cn.bandisoft.com/bandizip/</a> ；推荐原因如下：</h4><ul>
+<li>功能强大且免费，清新无广告，不流氓，无捆绑，支持中文</li>
+</ul>
+<h4 id="视频播放器：PotPlayer，官方下载地址：-https-potplayer-daum-net-；推荐原因如下："><a href="#视频播放器：PotPlayer，官方下载地址：-https-potplayer-daum-net-；推荐原因如下：" class="headerlink" title="视频播放器：PotPlayer，官方下载地址： https://potplayer.daum.net/ ；推荐原因如下："></a>视频播放器：PotPlayer，官方下载地址： <a href="https://potplayer.daum.net/" target="_blank" rel="noopener">https://potplayer.daum.net/</a> ；推荐原因如下：</h4><ul>
+<li>功能强大且免费，清新无广告，不流氓，无捆绑，支持中文</li>
+</ul>
+<h4 id="浏览器："><a href="#浏览器：" class="headerlink" title="浏览器："></a>浏览器：</h4><h5 id="Google-Chrome，官方下载地址：-https-www-google-com-intl-zh-CN-chrome-；推荐原因如下："><a href="#Google-Chrome，官方下载地址：-https-www-google-com-intl-zh-CN-chrome-；推荐原因如下：" class="headerlink" title="Google Chrome，官方下载地址： https://www.google.com/intl/zh-CN/chrome/ ；推荐原因如下："></a>Google Chrome，官方下载地址： <a href="https://www.google.com/intl/zh-CN/chrome/" target="_blank" rel="noopener">https://www.google.com/intl/zh-CN/chrome/</a> ；推荐原因如下：</h5><ul>
+<li>功能强大且免费，清新无广告，不流氓，无捆绑，支持中文，不喜欢Edge的可以使用它</li>
+</ul>
+<h5 id="火狐（firefox），https-www-firefox-com-cn-；推荐原因如下："><a href="#火狐（firefox），https-www-firefox-com-cn-；推荐原因如下：" class="headerlink" title="火狐（firefox），https://www.firefox.com.cn/ ；推荐原因如下："></a>火狐（firefox），<a href="https://www.firefox.com.cn/" target="_blank" rel="noopener">https://www.firefox.com.cn/</a> ；推荐原因如下：</h5><ul>
+<li>功能强大且免费，清新无广告，不流氓，无捆绑，支持中文，不喜欢Edge的可以使用它</li>
+</ul>
+<h4 id="截图软件：Win10自带屏幕截图，推荐原因如下："><a href="#截图软件：Win10自带屏幕截图，推荐原因如下：" class="headerlink" title="截图软件：Win10自带屏幕截图，推荐原因如下："></a>截图软件：Win10自带屏幕截图，推荐原因如下：</h4><ul>
+<li><p>自带，无需再次安装，功能够用（比某社交软件的截图好用），免费，可编辑</p>
+<p>打开方式如下图所示：<img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/%E5%AE%89%E8%A3%85Win10%E7%B3%BB%E7%BB%9F/50-%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%E8%BD%AF%E4%BB%B6.png" alt="如何打开Win10自带截图"></p>
+</li>
+<li><p>待更新（或者不再更新）……</p>
+</li>
+</ul>
+
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://mairf.cn" rel="external nofollow noreferrer">麦同学</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://mairf.cn/2019/10/14/an-zhuang-windows/">http://mairf.cn/2019/10/14/an-zhuang-windows/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="http://mairf.cn" target="_blank">麦同学</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/Windows/">
+                                    <span class="chip bg-color">Windows</span>
+                                </a>
+                            
+                                <a href="/tags/操作系统/">
+                                    <span class="chip bg-color">操作系统</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    
+    <div class="social-share" data-sites="qq,qzone,wechat,weibo,douban" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2019/10/26/you-hou-de-shi-yong-yi-chrome-wei-li/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="油猴的使用（以Chrome为例）">
+                        
+                        <span class="card-title">油猴的使用（以Chrome为例）</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            前言编写原因：
+最近常看到各个群里有人有偿刷网课，我不知道价格，但我知道，他们是怎么做到的，我很不爽，因为他们用的是别人写的，免费、开源的脚本，在不做任何修改的情况下，去牟利，我作为一个学计算机的，对这种做法很是不爽。
+所以，就有了这篇文章
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2019-10-26
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/实用工具及技巧/" class="post-category">
+                                    实用工具及技巧
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/实用工具/">
+                        <span class="chip bg-color">实用工具</span>
+                    </a>
+                    
+                    <a href="/tags/油猴/">
+                        <span class="chip bg-color">油猴</span>
+                    </a>
+                    
+                    <a href="/tags/Chrome/">
+                        <span class="chip bg-color">Chrome</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2019/10/14/ben-zhan-shuo-ming/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="本站说明">
+                        
+                        <span class="card-title">本站说明</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            &nbsp;  &nbsp;  &nbsp;  &nbsp;在日常学习的时候，会做一些实验，做一些尝试，会解决一些问题，成功之后大多数就很少再用，过段时间便会忘记，下一次想用的时候又要花费大量时间去查找资料。我曾尝试过在空间里写日志，但总感
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-10-14
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/本站说明/" class="post-category">
+                                    本站说明
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/杂项/">
+                        <span class="chip bg-color">杂项</span>
+                    </a>
+                    
+                    <a href="/tags/本站说明/">
+                        <span class="chip bg-color">本站说明</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('20')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: 不懂电脑的麦同学<br />'
+            + '文章作者: 麦同学<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+    
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            // headingsOffset: -205,
+            headingSelector: 'h1, h2, h3, h4, h5, h6'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h1, h2, h3, h4, h5, h6').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+    <footer class="page-footer bg-color">
+    <div class="container row center-align">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">年份</span>
+            <a href="http://mairf.cn" target="_blank">麦同学</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    window.setTimeout("siteTime()", 1000);
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2019";
+                    var startMonth = "10";
+                    var startDate = "12";
+                    var startHour = "0";
+                    var startMinute = "0";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+<a href="https://github.com/getMai" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub"
+    data-position="top" data-delay="50">
+    <i class="fab fa-github"></i>
+</a>
+
+
+
+<a href="mailto:MaiRuf@outlook.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我"
+    data-position="top" data-delay="50">
+    <i class="fas fa-envelope-open"></i>
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    
+    <script type="text/javascript" color="255,73,0"
+        pointColor="0,0,255" opacity='0.8'
+        zIndex="-1" count="150"
+        src="/libs/background/canvas-nest.js"></script>
+    
+
+    
+
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
+    
+    
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
