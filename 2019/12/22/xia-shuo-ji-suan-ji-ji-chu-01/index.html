@@ -4,10 +4,21 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="DNS服务器配置, 不懂电脑的麦同学">
-    <meta name="description" content="前言撰文目的
-这是在学习计算机网络基础这门课的时候做的一个实验，实验已经做完并且提交，写这篇文章的目的是为了对这个实验做个回顾总结，加深自己的印象，并做一些修正及记录，方便以后需要的时候查看。
-因为个人能力有限，所以文章中也许会出现一些错误">
+    <meta name="keywords" content="瞎说计算机基础_01 之 CPU、内存、硬盘间二三事, 不懂电脑的麦同学">
+    <meta name="description" content="前言文章内容
+什么是CPU
+什么是内存
+什么是硬盘
+它们的关系
+
+撰文目的
+记录自己学习计算机时候遇到的重要知识
+
+声明
+全文均为个人理解，重在笔记和理解，并不严谨，而且不保证绝对正确
+
+主体内容什么是CPUCPU长什么样
+CPU有什么用 ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -15,7 +26,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>DNS服务器配置 | 不懂电脑的麦同学</title>
+    <title>瞎说计算机基础_01 之 CPU、内存、硬盘间二三事 | 不懂电脑的麦同学</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -284,13 +295,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/文章封面图/云_二进制码.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/魔方.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        DNS服务器配置
+                        瞎说计算机基础_01 之 CPU、内存、硬盘间二三事
                     </div>
                 </div>
             </div>
@@ -402,16 +413,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/计算机网络基础/">
-                                <span class="chip bg-color">计算机网络基础</span>
+                            <a href="/tags/瞎说/">
+                                <span class="chip bg-color">瞎说</span>
                             </a>
                         
-                            <a href="/tags/实验报告/">
-                                <span class="chip bg-color">实验报告</span>
-                            </a>
-                        
-                            <a href="/tags/DNS服务器配置/">
-                                <span class="chip bg-color">DNS服务器配置</span>
+                            <a href="/tags/计算机基础/">
+                                <span class="chip bg-color">计算机基础</span>
                             </a>
                         
                     </div>
@@ -422,8 +429,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/计算机网络基础/" class="post-category">
-                                计算机网络基础
+                            <a href="/categories/计算机基础/" class="post-category">
+                                计算机基础
                             </a>
                         
                     </div>
@@ -435,28 +442,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-11-24
+                    2019-12-22
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2019-11-25
+                    2019-12-22
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    665
+                    2.4k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    8 分
                 </div>
                 
 				
@@ -472,40 +479,103 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h3 id="撰文目的"><a href="#撰文目的" class="headerlink" title="撰文目的"></a>撰文目的</h3><ul>
-<li>这是在学习计算机网络基础这门课的时候做的一个实验，实验已经做完并且提交，写这篇文章的目的是为了对这个实验做个<strong>回顾总结</strong>，加深自己的印象，并做一些<strong>修正及记录</strong>，方便以后需要的时候查看。</li>
-<li>因为个人能力有限，所以文章中也许会出现一些错误或不足，欢迎指正和建议。</li>
-<li>因为实验是之前做的，图片也是之前的，所以图片上有些文字有错误我也没有修改，不过不会影响要表达的意思。</li>
+                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h3 id="文章内容"><a href="#文章内容" class="headerlink" title="文章内容"></a>文章内容</h3><ul>
+<li>什么是CPU</li>
+<li>什么是内存</li>
+<li>什么是硬盘</li>
+<li>它们的关系</li>
 </ul>
-<h2 id="实验目的和要求"><a href="#实验目的和要求" class="headerlink" title="实验目的和要求"></a>实验目的和要求</h2><h3 id="实验目的：配置DNS服务器，使域名和IP地址可以相互查找"><a href="#实验目的：配置DNS服务器，使域名和IP地址可以相互查找" class="headerlink" title="实验目的：配置DNS服务器，使域名和IP地址可以相互查找"></a>实验目的：配置DNS服务器，使域名和IP地址可以相互查找</h3><h3 id="实验要求：成功配置DNS服务器，并实现域名和IP地址的相互查找"><a href="#实验要求：成功配置DNS服务器，并实现域名和IP地址的相互查找" class="headerlink" title="实验要求：成功配置DNS服务器，并实现域名和IP地址的相互查找"></a>实验要求：成功配置DNS服务器，并实现域名和IP地址的相互查找</h3><h2 id="实验环境（新增，原实验报告中没有）"><a href="#实验环境（新增，原实验报告中没有）" class="headerlink" title="实验环境（新增，原实验报告中没有）"></a>实验环境（新增，原实验报告中没有）</h2><h3 id="操作系统"><a href="#操作系统" class="headerlink" title="操作系统"></a>操作系统</h3><ul>
-<li>实体机（物理机、<strong>客户端</strong>）：<strong>Windows 10</strong></li>
-<li>虚拟机（<strong>服务器</strong>）：<strong>Windows Server 2008 R2</strong></li>
+<h3 id="撰文目的"><a href="#撰文目的" class="headerlink" title="撰文目的"></a>撰文目的</h3><ul>
+<li>记录自己学习计算机时候遇到的重要知识</li>
 </ul>
-<h3 id="使用软件"><a href="#使用软件" class="headerlink" title="使用软件"></a>使用软件</h3><ul>
-<li><strong>VMware Workstation</strong>（虚拟机软件）</li>
+<h3 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h3><ul>
+<li>全文均为个人理解，重在笔记和理解，并不严谨，而且不保证绝对正确</li>
 </ul>
-<h3 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h3><ul>
-<li>因为有好多实验的环境搭建有重复，所以之后会单独写一篇文章，这里暂时不写</li>
+<h2 id="主体内容"><a href="#主体内容" class="headerlink" title="主体内容"></a>主体内容</h2><h3 id="什么是CPU"><a href="#什么是CPU" class="headerlink" title="什么是CPU"></a>什么是CPU</h3><h4 id="CPU长什么样"><a href="#CPU长什么样" class="headerlink" title="CPU长什么样"></a>CPU长什么样</h4><p><img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/%E7%9E%8E%E8%AF%B4%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80_01/CPU_0.png" alt="CPU"></p>
+<h4 id="CPU有什么用"><a href="#CPU有什么用" class="headerlink" title="CPU有什么用"></a>CPU有什么用</h4><pre class="line-numbers language-tex"><code class="language-tex">    CPU ：中央处理器 （Central Processing Unit）是计算机的主要设备之一，功能主要是解释计算机指令以及处理计算机软件中的数据（以上摘自 wiki 百科：https://zh.wikipedia.org/wiki/中央处理器 ）。
+
+    也就是说，所谓CPU，就是计算机的大脑，用于处理指令和数据。
+    举个例子：请对下面的式子进行计算，并给出计算结果：
+                * 1 + 1 = 
+    我们根据题干可以得出，我们要做的，就是计算“1 + 1 = ”，那么，我们根据题干去做计算，就是根据指令去做相应的动作，而“1 + 1 = ”就是数据，当我们得出“1 + 1 = 2”的时候，我们就是对数据进行了处理。
+    而不论我们对指令做出反应，还是得出“1 + 1 = 2”，都是通过大脑来完成，或者说，通过大脑来控制身体其它部分来完成。
+    而这，就是CPU的作用，即：对指令做出反应以及对数据进行处理。
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="CPU的优缺点："><a href="#CPU的优缺点：" class="headerlink" title="CPU的优缺点："></a>CPU的优缺点：</h4><ul>
+<li>优点：速度快</li>
+<li>缺点：容量小</li>
 </ul>
-<h2 id="实验内容"><a href="#实验内容" class="headerlink" title="实验内容"></a>实验内容</h2><h3 id="使用VMware-Windows-Server-2008配置进行DNS服务器的配置"><a href="#使用VMware-Windows-Server-2008配置进行DNS服务器的配置" class="headerlink" title="使用VMware + Windows Server 2008配置进行DNS服务器的配置"></a>使用VMware + Windows Server 2008配置进行DNS服务器的配置</h3><h3 id="使用实体机，使用“nslookup”命令测试，看配置是否成功"><a href="#使用实体机，使用“nslookup”命令测试，看配置是否成功" class="headerlink" title="使用实体机，使用“nslookup”命令测试，看配置是否成功"></a>使用实体机，使用“nslookup”命令测试，看配置是否成功</h3><h2 id="实验步骤"><a href="#实验步骤" class="headerlink" title="实验步骤"></a>实验步骤</h2><h3 id="配置实体机和虚拟机（服务器）的IP地址，使它们在同一子网下："><a href="#配置实体机和虚拟机（服务器）的IP地址，使它们在同一子网下：" class="headerlink" title="配置实体机和虚拟机（服务器）的IP地址，使它们在同一子网下："></a>配置实体机和虚拟机（服务器）的IP地址，使它们在同一子网下：</h3><p><img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/DNS%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/01-%E9%85%8D%E7%BD%AE%E5%AE%9E%E4%BD%93%E6%9C%BA%E5%92%8C%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%9A%84IP%E5%9C%B0%E5%9D%80.png" alt="配置实体机和虚拟机的IP地址"></p>
-<h3 id="使用实体机和虚拟机（服务器）相互-ping-看是否能通（测试两者通信性）："><a href="#使用实体机和虚拟机（服务器）相互-ping-看是否能通（测试两者通信性）：" class="headerlink" title="使用实体机和虚拟机（服务器）相互 ping 看是否能通（测试两者通信性）："></a>使用实体机和虚拟机（服务器）相互 ping 看是否能通（测试两者通信性）：</h3><p><img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/DNS%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/02-%E6%B5%8B%E8%AF%95%E5%AE%9E%E4%BD%93%E6%9C%BA%E4%B8%8E%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%9A%84%E9%80%9A%E4%BF%A1.png" alt="配置实体机和虚拟机的IP地址"></p>
-<h3 id="设置DNS服务器的正向查找区域"><a href="#设置DNS服务器的正向查找区域" class="headerlink" title="设置DNS服务器的正向查找区域"></a>设置DNS服务器的正向查找区域</h3><h4 id="创建主要区域"><a href="#创建主要区域" class="headerlink" title="创建主要区域"></a>创建主要区域</h4><p><img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/DNS%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/03-%E9%85%8D%E7%BD%AEDNS%E6%AD%A3%E5%90%91%E6%9F%A5%E6%89%BE-01-%E5%88%9B%E5%BB%BA%E4%B8%BB%E8%A6%81%E5%8C%BA%E5%9F%9F.png" alt="配置DNS正向查找-01-创建主要区域"></p>
-<h4 id="设置区域名称"><a href="#设置区域名称" class="headerlink" title="设置区域名称"></a>设置区域名称</h4><p><img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/DNS%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/04-%E9%85%8D%E7%BD%AEDNS%E6%AD%A3%E5%90%91%E6%9F%A5%E6%89%BE-02-%E8%AE%BE%E7%BD%AE%E5%8C%BA%E5%9F%9F%E5%90%8D%E7%A7%B0.png" alt="配置DNS正向查找-02-设置区域名称"></p>
-<h4 id="创建新文件"><a href="#创建新文件" class="headerlink" title="创建新文件"></a>创建新文件</h4><p><img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/DNS%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/05-%E9%85%8D%E7%BD%AEDNS%E6%AD%A3%E5%90%91%E6%9F%A5%E6%89%BE-03-%E5%88%9B%E5%BB%BA%E6%96%B0%E6%96%87%E4%BB%B6.png" alt="配置DNS正向查找-03-创建新文件"></p>
-<h4 id="设置主机IP地址"><a href="#设置主机IP地址" class="headerlink" title="设置主机IP地址"></a>设置主机IP地址</h4><p><img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/DNS%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/06-%E9%85%8D%E7%BD%AEDNS%E6%AD%A3%E5%90%91%E6%9F%A5%E6%89%BE-04-%E8%AE%BE%E7%BD%AE%E4%B8%BB%E6%9C%BAIP%E5%9C%B0%E5%9D%80.png" alt="配置实体机和虚拟机的IP地址"></p>
-<h3 id="设置DNS服务器的正向查找区域-1"><a href="#设置DNS服务器的正向查找区域-1" class="headerlink" title="设置DNS服务器的正向查找区域"></a>设置DNS服务器的正向查找区域</h3><h4 id="新建区域"><a href="#新建区域" class="headerlink" title="新建区域"></a>新建区域</h4><p><img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/DNS%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/07-%E9%85%8D%E7%BD%AEDNS%E5%8F%8D%E5%90%91%E6%9F%A5%E6%89%BE-01-%E6%96%B0%E5%BB%BA%E5%8C%BA%E5%9F%9F.png" alt="配置DNS反向查找-01-新建区域"></p>
-<h4 id="输入在设置正向查找时设置的主机IP"><a href="#输入在设置正向查找时设置的主机IP" class="headerlink" title="输入在设置正向查找时设置的主机IP"></a>输入在设置正向查找时设置的主机IP</h4><p><img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/DNS%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/08-%E9%85%8D%E7%BD%AEDNS%E5%8F%8D%E5%90%91%E6%9F%A5%E6%89%BE-02-%E8%BE%93%E5%85%A5%E6%AD%A3%E5%90%91%E6%9F%A5%E6%89%BE%E7%9A%84%E4%B8%BB%E6%9C%BAIP.png" alt="配置DNS反向查找-02-输入正向查找的主机IP"></p>
-<h4 id="创建新文件-1"><a href="#创建新文件-1" class="headerlink" title="创建新文件"></a>创建新文件</h4><p><img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/DNS%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/09-%E9%85%8D%E7%BD%AEDNS%E5%8F%8D%E5%90%91%E6%9F%A5%E6%89%BE-03-%E5%88%9B%E5%BB%BA%E6%96%B0%E6%96%87%E4%BB%B6.png" alt="配置DNS反向查找-03-创建新文件"></p>
-<h4 id="新建指针及添加正向查找区域的主机"><a href="#新建指针及添加正向查找区域的主机" class="headerlink" title="新建指针及添加正向查找区域的主机"></a>新建指针及添加正向查找区域的主机</h4><p><img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/DNS%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/10-%E9%85%8D%E7%BD%AEDNS%E5%8F%8D%E5%90%91%E6%9F%A5%E6%89%BE-04-%E6%96%B0%E5%BB%BA%E6%8C%87%E9%92%88%E5%8F%8A%E6%B7%BB%E5%8A%A0%E6%AD%A3%E5%90%91%E6%9F%A5%E6%89%BE%E5%8C%BA%E5%9F%9F%E7%9A%84%E4%B8%BB%E6%9C%BA.png" alt="配置DNS反向查找-04-新建指针及添加正向查找区域的主机"></p>
-<h3 id="使用“nslookup”命令，测试DNS服务器是否配置成功"><a href="#使用“nslookup”命令，测试DNS服务器是否配置成功" class="headerlink" title="使用“nslookup”命令，测试DNS服务器是否配置成功"></a>使用“nslookup”命令，测试DNS服务器是否配置成功</h3><h4 id="虚拟机（服务器）上测试"><a href="#虚拟机（服务器）上测试" class="headerlink" title="虚拟机（服务器）上测试"></a>虚拟机（服务器）上测试</h4><p><img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/DNS%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/11-%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%B5%8B%E8%AF%95DNS%E8%A7%A3%E6%9E%90%E5%8A%9F%E8%83%BD.png" alt="虚拟机测试DNS解析功能"></p>
-<h4 id="实体机（客户端）上测试"><a href="#实体机（客户端）上测试" class="headerlink" title="实体机（客户端）上测试"></a>实体机（客户端）上测试</h4><p><img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/DNS%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/12-%E5%AE%9E%E4%BD%93%E6%9C%BA%E6%B5%8B%E8%AF%95DNS%E8%A7%A3%E6%9E%90%E5%8A%9F%E8%83%BD.png" alt="实体机测试DNS解析功能"></p>
-<h2 id="实验结果分析与体会"><a href="#实验结果分析与体会" class="headerlink" title="实验结果分析与体会"></a>实验结果分析与体会</h2><h3 id="实验结果分析"><a href="#实验结果分析" class="headerlink" title="实验结果分析"></a>实验结果分析</h3><ul>
-<li><strong>使用实体机使用 “nslookup”命令，成功通过域名解析获得主机IP地址，也可通过主机IP地址解析获得域名。</strong></li>
+<h3 id="什么是内存"><a href="#什么是内存" class="headerlink" title="什么是内存"></a>什么是内存</h3><h4 id="内存长什么样"><a href="#内存长什么样" class="headerlink" title="内存长什么样"></a>内存长什么样</h4><p><img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/%E7%9E%8E%E8%AF%B4%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80_01/%E5%86%85%E5%AD%98%E6%9D%A1.png" alt="内存"></p>
+<h4 id="内存有什么用"><a href="#内存有什么用" class="headerlink" title="内存有什么用"></a>内存有什么用</h4><pre class="line-numbers language-tex"><code class="language-tex">    内存：随机存取存储器（Random Access Memory，缩写：RAM；也叫主存）是与CPU直接交换数据的内部存储器。可以随时读写（刷新时除外），而且速度很快，通常作为操作系统或其他正在运行中的程序的临时数据存储介质。
+    主存（Main memory）即电脑内部最主要的存储器，用来加载各式各样的程序与数据以供CPU直接运行与运用。（以上摘自 wiki 百科：https://zh.wikipedia.org/wiki/随机存取存储器 ）。
+
+    所谓内存，就像快递点，可以帮你临时存放你的快递，但不能永久帮你保存。它可以与CPU直接通信（也就是这两个可以直接勾搭上）。
+    为什么会出现它呢？
+    因为CPU虽然速度快，但奈何容量小，若数据太多，那么CPU就会无处将它们安放，也就会导致一部分数据丢失，这明显不是我们所想要的，于是，就出现内存。
+    CPU会将要处理的数据读取到CPU中进行处理，而待处理的数据就存放在内存中。
+    实际上，在CPU和内存间还有个叫 cache 的家伙，但它不是今天的重点，先略过。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="内存的优缺点"><a href="#内存的优缺点" class="headerlink" title="内存的优缺点"></a>内存的优缺点</h4><ul>
+<li>优点：速度快（相对于硬盘）、容量大（相对于CPU），可与CPU直接通信</li>
+<li>缺点：断电清空，即断电之后，所有数据都将丢失</li>
 </ul>
-<h3 id="实验小结"><a href="#实验小结" class="headerlink" title="实验小结"></a>实验小结</h3><ul>
-<li><strong>虚拟机的网络适配器要改成桥接模式否则虚拟机的IP地址会出现问题</strong></li>
-<li><strong>虚拟机和实体机必须要在同一子网下</strong></li>
-<li><strong>虚拟机和实体机的防火墙必须关闭，否则，有防火墙的一方，不能被访问</strong></li>
+<h3 id="什么是硬盘"><a href="#什么是硬盘" class="headerlink" title="什么是硬盘"></a>什么是硬盘</h3><h4 id="硬盘长什么样"><a href="#硬盘长什么样" class="headerlink" title="硬盘长什么样"></a>硬盘长什么样</h4><p><img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/%E7%9E%8E%E8%AF%B4%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80_01/%E7%A1%AC%E7%9B%98.png" alt="硬盘"></p>
+<h4 id="硬盘有什么用"><a href="#硬盘有什么用" class="headerlink" title="硬盘有什么用"></a>硬盘有什么用</h4><pre class="line-numbers language-tex"><code class="language-tex">    硬盘（Hard Disk Drive，缩写：HDD）是电脑上使用坚硬的旋转盘片为基础的非易失性存储器，它在平整的磁性表面存储和检索数字数据，数据通过离磁性表面很近的磁头由电磁流来改变极性的方式被写入到磁盘上，数据可以通过盘片被读取，原理是磁头经过盘片的上方时盘片本身的磁场导致读取线圈中电气信号改变。硬盘的读写是采用半随机存取的方式，可以以任意顺序读取硬盘中的数据，但读取不同位置的资料速度不相同。硬盘包括一至数片高速转动的盘片以及放在执行器悬臂上的磁头。（以上摘自 wiki 百科：https://zh.wikipedia.org/wiki/硬盘 ）。
+
+    所谓硬盘，就像你的家，可以永久保存你的东西，前提是这些东西可以永久不损坏，或者你家永久不变。它不能和CPU直接通信（也就是不能直接勾搭上）。
+    为什么会出现它呢？
+    因为有些操作又是需要重复的，比如播放音乐，而内存有具有断电清空的特点。如果每次要播放音乐都需要写一次播放音乐用的程序（程序可以简单理解成一些指令的集合，就像一张试卷一样）。就像隔壁村的王木匠每次要用到锤子的的时候，都要重新造一个一样，浪费了不必要的时间。
+    因此，人们便想着将那些会经常用到的程序存放起来，需要的时候就将其读取到内存中，再由CPU进行处理，于是，硬盘出现了。
+    从此，每次听音乐不再需要现写一个程序，隔壁村的王木匠也有了一个长期可用的锤子，不需要在每次要用的时候重新造了。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="硬盘的优缺点"><a href="#硬盘的优缺点" class="headerlink" title="硬盘的优缺点"></a>硬盘的优缺点</h4><ul>
+<li>优点：容量大，可长期存储数据且断电后数据不丢失</li>
+<li>缺点：速度慢，无法与CPU直接通信</li>
+</ul>
+<h3 id="它们的关系"><a href="#它们的关系" class="headerlink" title="它们的关系"></a>它们的关系</h3><h4 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h4><pre class="line-numbers language-tex"><code class="language-tex">    先来个案例：
+    有个小伙子叫阿麦，他要去考科目一，他去到了车管所，发现要考场的布局就像下面那张图一样<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p><img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/%E7%9E%8E%E8%AF%B4%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80_01/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%801.png" alt="案例图"></p>
+<pre class="line-numbers language-tex"><code class="language-tex">    阿麦首先要在休息区存放随身携带的物品，因为这时候考试区里面有人在考试，等待区又有满员了，于是他便在休息区等待考官的安排以进入待考区等待考试。[1]
+    过了一会，他发现等待区已经没人了，但是考官依然没让他进入待考区，他按捺不住，上前询问考官。
+    考官：“你是几点的考场？”
+    阿麦：“我是早上10点的。”
+    考官：“现在是早上8点的考场，你先回去休息区坐着等吧。”
+    阿麦看了看时间，现在才9点30，还没到10点，没办法，他只能回到休息区继续等待。
+    过了一会，时间到了，考官过来了，让休息区中，早上10点考场的人现在排队，依次进入待考区，因为阿麦排的比较靠后，所以进了待考区后，他依然需要等待。[2]
+    当代考区满后，考官把门关上，避免其他人再进入待考区，这时候，考官说了考试记录和注意事项之后，让待考区的人依次到前面刷身份证，等待考试座位的安排，拿到考试座位后即刻进入考场进行考试。
+    因为阿麦排在后面，所以需要等待前面的人进考场后才能去获取考试座位安排，虽然心里有些急，但还是得等着。[3]
+    眼看就要到他了，突然考官带进来一位孕妇，考官让她先进去考试，当她进入考场之后，考场人数满了，阿麦没办法只能继续等。[4]
+    又过了一会，有人考完走了，于是阿麦开开心心地刷身份证，拿了考试座位安排就进入考场考试去了。
+    考完之后，他又回到代考区，然后从待考区回到了休息区，取了个人物品之后，回学校去了。[5]
+-------------------------------------------------------------------<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-tex"><code class="language-tex">    分析：
+    [1] 阿麦要进入考场考试必须要先进入待考区
+    [2] 阿麦必须满足条件才能进入待考区
+    [3] 即使进了待考区，阿麦仍需排队
+    [4] 即使轮到阿麦进入考场，但遇到特殊情况，阿麦仍需往后排
+    [5] 阿麦考完试后要回到休息区，必须先回到待考区<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="三者的关系"><a href="#三者的关系" class="headerlink" title="三者的关系"></a>三者的关系</h4><pre class="line-numbers language-tex"><code class="language-tex">1、CPU就是案例中的考场
+
+2、内存就是案例中的待考区
+
+3、硬盘就是案例中的休息区
+
+4、硬盘的数据要进入CPU，由CPU处理，就必须先进入内存（对应案例分析的[1]）
+
+5、即使内存没有满，但硬盘的数据依然不能随意进入内存，需要满足一定条件才能进入内存，等待CPU的处理（对应案例分析的[2]）
+
+6、即使硬盘数据进入了内存，仍然需要排队（对应案例分析的[3]）
+
+7、即使轮到该数据进入CPU，由CPU处理，但如果有特殊情况（如系统安全等优先级较高的事件），该数据依然要往后排（对应案例分析的[4]）
+
+8、数据处理完后，若要回到硬盘，依然要经由内存，而不能直接回到硬盘
+
+9、由硬盘 到 内存 再到 CPU 的过程叫做读取
+
+9、由CPU 到 内存 再到 硬盘 的过程叫做写入
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ul>
+<li>CPU就像军队中的指挥部，内存就像是通讯兵，硬盘就像营区。指挥部的指令不能直接下到基层士兵，基层士兵也不能直接向指挥部汇报，所以要有通讯兵来充当二者的桥梁</li>
+<li>计算机中，这三者是最常见的，比如买电脑的时候，所以我才写这篇文章，其它的关于计算机组成的知识，推荐去看书</li>
+<li>这篇文章在我想写的 二级系列 和 C 语言系列 中，都是第一篇，因为二级中涉及到的栈和队列等计算机基础知识，和 C 语言里面，指针、数组的知识，都需要对内存有一定了解，而内存又和CPU和硬盘无法分离，所以我就放一起了</li>
 </ul>
 
             </div>
@@ -532,7 +602,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://mairf.cn/2019/11/24/dns-fu-wu-qi-pei-zhi/">http://mairf.cn/2019/11/24/dns-fu-wu-qi-pei-zhi/</a>
+                    <a href="http://mairf.cn/2019/12/22/xia-shuo-ji-suan-ji-ji-chu-01/">http://mairf.cn/2019/12/22/xia-shuo-ji-suan-ji-ji-chu-01/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -570,16 +640,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/计算机网络基础/">
-                                    <span class="chip bg-color">计算机网络基础</span>
+                                <a href="/tags/瞎说/">
+                                    <span class="chip bg-color">瞎说</span>
                                 </a>
                             
-                                <a href="/tags/实验报告/">
-                                    <span class="chip bg-color">实验报告</span>
-                                </a>
-                            
-                                <a href="/tags/DNS服务器配置/">
-                                    <span class="chip bg-color">DNS服务器配置</span>
+                                <a href="/tags/计算机基础/">
+                                    <span class="chip bg-color">计算机基础</span>
                                 </a>
                             
                         </div>
@@ -620,9 +686,77 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2019/12/22/xia-shuo-ji-suan-ji-ji-chu-01/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/魔方.jpg" class="responsive-img" alt="瞎说计算机基础_01 之 CPU、内存、硬盘间二三事">
+                        
+                        <span class="card-title">瞎说计算机基础_01 之 CPU、内存、硬盘间二三事</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            前言文章内容
+什么是CPU
+什么是内存
+什么是硬盘
+它们的关系
+
+撰文目的
+记录自己学习计算机时候遇到的重要知识
+
+声明
+全文均为个人理解，重在笔记和理解，并不严谨，而且不保证绝对正确
+
+主体内容什么是CPUCPU长什么样
+CPU有什么用 
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-12-22
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/计算机基础/" class="post-category">
+                                    计算机基础
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/瞎说/">
+                        <span class="chip bg-color">瞎说</span>
+                    </a>
+                    
+                    <a href="/tags/计算机基础/">
+                        <span class="chip bg-color">计算机基础</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2019/11/25/ftp-fu-wu-qi-pei-zhi/">
                     <div class="card-image">
@@ -645,9 +779,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2019-11-25
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-25
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -673,64 +807,6 @@
                     
                     <a href="/tags/FTP服务器配置/">
                         <span class="chip bg-color">FTP服务器配置</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2019/10/26/you-hou-de-shi-yong-yi-chrome-wei-li/">
-                    <div class="card-image">
-                        
-                        <img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/文章封面图/魔方.jpg" class="responsive-img" alt="油猴的使用（以Chrome为例）">
-                        
-                        <span class="card-title">油猴的使用（以Chrome为例）</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            前言编写原因：
-最近常看到各个群里有人有偿刷网课，我不知道价格，但我知道，他们是怎么做到的，我很不爽，因为他们用的是别人写的，免费、开源的脚本，在不做任何修改的情况下，去牟利，我作为一个学计算机的，对这种做法很是不爽。
-所以，就有了这篇文章
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-10-26
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/实用工具及技巧/" class="post-category">
-                                    实用工具及技巧
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/实用工具/">
-                        <span class="chip bg-color">实用工具</span>
-                    </a>
-                    
-                    <a href="/tags/油猴/">
-                        <span class="chip bg-color">油猴</span>
-                    </a>
-                    
-                    <a href="/tags/Chrome/">
-                        <span class="chip bg-color">Chrome</span>
                     </a>
                     
                 </div>
