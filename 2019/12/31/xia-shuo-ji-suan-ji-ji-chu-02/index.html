@@ -4,12 +4,12 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="瞎说计算机基础_01 之 CPU、内存、硬盘间二三事, 不懂电脑的麦同学">
+    <meta name="keywords" content="瞎说计算机基础_02 之 进制的那些事, 不懂电脑的麦同学">
     <meta name="description" content="前言文章内容
-什么是CPU
-什么是内存
-什么是硬盘
-它们的关系
+什么是进制
+什么是二进制
+为什么使用二进制
+进制间的转换
 
 撰文目的
 记录自己学习计算机时候遇到的重要知识
@@ -17,8 +17,7 @@
 声明
 全文均为个人理解，重在笔记和理解，并不严谨，而且不保证绝对正确
 
-主体内容什么是CPUCPU长什么样
-CPU有什么用 ">
+主体内容什么是进制    早在初学数学的时候">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -26,7 +25,7 @@ CPU有什么用 ">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>瞎说计算机基础_01 之 CPU、内存、硬盘间二三事 | 不懂电脑的麦同学</title>
+    <title>瞎说计算机基础_02 之 进制的那些事 | 不懂电脑的麦同学</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -301,7 +300,7 @@ CPU有什么用 ">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        瞎说计算机基础_01 之 CPU、内存、硬盘间二三事
+                        瞎说计算机基础_02 之 进制的那些事
                     </div>
                 </div>
             </div>
@@ -442,28 +441,28 @@ CPU有什么用 ">
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-12-22
+                    2019-12-31
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2019-12-22
+                    2020-01-01
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.4k
+                    1.4k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    8 分
+                    4 分
                 </div>
                 
 				
@@ -480,10 +479,10 @@ CPU有什么用 ">
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h3 id="文章内容"><a href="#文章内容" class="headerlink" title="文章内容"></a>文章内容</h3><ul>
-<li>什么是CPU</li>
-<li>什么是内存</li>
-<li>什么是硬盘</li>
-<li>它们的关系</li>
+<li>什么是进制</li>
+<li>什么是二进制</li>
+<li>为什么使用二进制</li>
+<li>进制间的转换</li>
 </ul>
 <h3 id="撰文目的"><a href="#撰文目的" class="headerlink" title="撰文目的"></a>撰文目的</h3><ul>
 <li>记录自己学习计算机时候遇到的重要知识</li>
@@ -491,91 +490,84 @@ CPU有什么用 ">
 <h3 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h3><ul>
 <li>全文均为个人理解，重在笔记和理解，并不严谨，而且不保证绝对正确</li>
 </ul>
-<h2 id="主体内容"><a href="#主体内容" class="headerlink" title="主体内容"></a>主体内容</h2><h3 id="什么是CPU"><a href="#什么是CPU" class="headerlink" title="什么是CPU"></a>什么是CPU</h3><h4 id="CPU长什么样"><a href="#CPU长什么样" class="headerlink" title="CPU长什么样"></a>CPU长什么样</h4><p><img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/%E7%9E%8E%E8%AF%B4%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80_01/CPU_0.png" alt="CPU"></p>
-<h4 id="CPU有什么用"><a href="#CPU有什么用" class="headerlink" title="CPU有什么用"></a>CPU有什么用</h4><pre class="line-numbers language-tex"><code class="language-tex">    CPU ：中央处理器 （Central Processing Unit）是计算机的主要设备之一，功能主要是解释计算机指令以及处理计算机软件中的数据（以上摘自 wiki 百科：https://zh.wikipedia.org/wiki/中央处理器 ）。
-
-    也就是说，所谓CPU，就是计算机的大脑，用于处理指令和数据。
-    举个例子：请对下面的式子进行计算，并给出计算结果：
-                * 1 + 1 = 
-    我们根据题干可以得出，我们要做的，就是计算“1 + 1 = ”，那么，我们根据题干去做计算，就是根据指令去做相应的动作，而“1 + 1 = ”就是数据，当我们得出“1 + 1 = 2”的时候，我们就是对数据进行了处理。
-    而不论我们对指令做出反应，还是得出“1 + 1 = 2”，都是通过大脑来完成，或者说，通过大脑来控制身体其它部分来完成。
-    而这，就是CPU的作用，即：对指令做出反应以及对数据进行处理。
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="CPU的优缺点："><a href="#CPU的优缺点：" class="headerlink" title="CPU的优缺点："></a>CPU的优缺点：</h4><ul>
-<li>优点：速度快</li>
-<li>缺点：容量小</li>
+<h2 id="主体内容"><a href="#主体内容" class="headerlink" title="主体内容"></a>主体内容</h2><h3 id="什么是进制"><a href="#什么是进制" class="headerlink" title="什么是进制"></a>什么是进制</h3><pre class="line-numbers language-tex"><code class="language-tex">    早在初学数学的时候，我们就知道，从“0” - “9”一共有10个数字，而在计算中，每逢 “9 + 1” 就要进 “1”，变成“10”，也就是通常说的“逢 10 进 1”。
+    而我们日常使用的，这种“逢 10 进 1”的表示数据的方式被称为“10 进制”。
+    同时，可以发现，数字“10”并不是一个新的数字，而是由数字“1”和“0”来组成的，且进“1”之后，便由“9”变成了“10”。
+    如果十进制是“逢 10 进 1”，那八进制呢？没错，就是“逢 8 进 1”。如果是“逢 8 进 1”，那“8”又该如何表示呢？对，每当遇到“7 + 1”，它就会进“1”，进“1”之后，“8”就变成了“10”.
+    依次类推，2进制就是“逢 2 进 1”，16进制就“逢 16 进 1”……<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>所谓“进制”，就是“逢 几 进 一”</li>
+<li>若是“X（如8） 进制”，那么在表示的时候就绝不会出现“X（如8）”这个数字，而“X（如8）”则用“10（这里应该是 1（一） 0（零），而不是10（十））”来表示</li>
 </ul>
-<h3 id="什么是内存"><a href="#什么是内存" class="headerlink" title="什么是内存"></a>什么是内存</h3><h4 id="内存长什么样"><a href="#内存长什么样" class="headerlink" title="内存长什么样"></a>内存长什么样</h4><p><img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/%E7%9E%8E%E8%AF%B4%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80_01/%E5%86%85%E5%AD%98%E6%9D%A1.png" alt="内存"></p>
-<h4 id="内存有什么用"><a href="#内存有什么用" class="headerlink" title="内存有什么用"></a>内存有什么用</h4><pre class="line-numbers language-tex"><code class="language-tex">    内存：随机存取存储器（Random Access Memory，缩写：RAM；也叫主存）是与CPU直接交换数据的内部存储器。可以随时读写（刷新时除外），而且速度很快，通常作为操作系统或其他正在运行中的程序的临时数据存储介质。
-    主存（Main memory）即电脑内部最主要的存储器，用来加载各式各样的程序与数据以供CPU直接运行与运用。（以上摘自 wiki 百科：https://zh.wikipedia.org/wiki/随机存取存储器 ）。
-
-    所谓内存，就像快递点，可以帮你临时存放你的快递，但不能永久帮你保存。它可以与CPU直接通信（也就是这两个可以直接勾搭上）。
-    为什么会出现它呢？
-    因为CPU虽然速度快，但奈何容量小，若数据太多，那么CPU就会无处将它们安放，也就会导致一部分数据丢失，这明显不是我们所想要的，于是，就出现内存。
-    CPU会将要处理的数据读取到CPU中进行处理，而待处理的数据就存放在内存中。
-    实际上，在CPU和内存间还有个叫 cache 的家伙，但它不是今天的重点，先略过。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="内存的优缺点"><a href="#内存的优缺点" class="headerlink" title="内存的优缺点"></a>内存的优缺点</h4><ul>
-<li>优点：速度快（相对于硬盘）、容量大（相对于CPU），可与CPU直接通信</li>
-<li>缺点：断电清空，即断电之后，所有数据都将丢失</li>
+<h3 id="二进制"><a href="#二进制" class="headerlink" title="二进制"></a>二进制</h3><h4 id="什么是二进制"><a href="#什么是二进制" class="headerlink" title="什么是二进制"></a>什么是二进制</h4><pre class="line-numbers language-tex"><code class="language-tex">    我们已经知道，“进制”，就是“逢 几 进 一”，那么，二进制就是“逢 2 进 1”的一种数据的表示方式。<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h4 id="为什么使用二进制"><a href="#为什么使用二进制" class="headerlink" title="为什么使用二进制"></a>为什么使用二进制</h4><pre class="line-numbers language-tex"><code class="language-tex">    其实原因很简单，因为我们大多数人都可以掰着手指头从“1”数到“10（十）”，于是便将十进制作为日常使用的数据表示方式。
+    但是计算机毕竟是个机器，它们没有手指头可数，而是和家里的电灯之类的电器一样，只有两种状态：“通电”或“不通电”（其实不同的计算机状态不同，有些使用高低电位，这里简单理解成“通电”或“不通电”即可），于是人们便规定使用“0”和“1”来表示计算机的两种状态。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<ul>
+<li>之所以使用二进制是因为计算机只有“通电”或“不通电”两种状态，因次人们规定使用二进制来表示计算机的两种状态</li>
+<li>正因为计算机的这种特性，所以计算机中所有的数据最后都会采用二进制来表示</li>
 </ul>
-<h3 id="什么是硬盘"><a href="#什么是硬盘" class="headerlink" title="什么是硬盘"></a>什么是硬盘</h3><h4 id="硬盘长什么样"><a href="#硬盘长什么样" class="headerlink" title="硬盘长什么样"></a>硬盘长什么样</h4><p><img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/%E7%9E%8E%E8%AF%B4%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80_01/%E7%A1%AC%E7%9B%98.png" alt="硬盘"></p>
-<h4 id="硬盘有什么用"><a href="#硬盘有什么用" class="headerlink" title="硬盘有什么用"></a>硬盘有什么用</h4><pre class="line-numbers language-tex"><code class="language-tex">    硬盘（Hard Disk Drive，缩写：HDD）是电脑上使用坚硬的旋转盘片为基础的非易失性存储器，它在平整的磁性表面存储和检索数字数据，数据通过离磁性表面很近的磁头由电磁流来改变极性的方式被写入到磁盘上，数据可以通过盘片被读取，原理是磁头经过盘片的上方时盘片本身的磁场导致读取线圈中电气信号改变。硬盘的读写是采用半随机存取的方式，可以以任意顺序读取硬盘中的数据，但读取不同位置的资料速度不相同。硬盘包括一至数片高速转动的盘片以及放在执行器悬臂上的磁头。（以上摘自 wiki 百科：https://zh.wikipedia.org/wiki/硬盘 ）。
-
-    所谓硬盘，就像你的家，可以永久保存你的东西，前提是这些东西可以永久不损坏，或者你家永久不变。它不能和CPU直接通信（也就是不能直接勾搭上）。
-    为什么会出现它呢？
-    因为有些操作又是需要重复的，比如播放音乐，而内存有具有断电清空的特点。如果每次要播放音乐都需要写一次播放音乐用的程序（程序可以简单理解成一些指令的集合，就像一张试卷一样）。就像隔壁村的王木匠每次要用到锤子的的时候，都要重新造一个一样，浪费了不必要的时间。
-    因此，人们便想着将那些会经常用到的程序存放起来，需要的时候就将其读取到内存中，再由CPU进行处理，于是，硬盘出现了。
-    从此，每次听音乐不再需要现写一个程序，隔壁村的王木匠也有了一个长期可用的锤子，不需要在每次要用的时候重新造了。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="硬盘的优缺点"><a href="#硬盘的优缺点" class="headerlink" title="硬盘的优缺点"></a>硬盘的优缺点</h4><ul>
-<li>优点：容量大，可长期存储数据且断电后数据不丢失</li>
-<li>缺点：速度慢，无法与CPU直接通信</li>
+<h3 id="进制间的转换"><a href="#进制间的转换" class="headerlink" title="进制间的转换"></a>进制间的转换</h3><h4 id="二进制-和-十进制-间的转换"><a href="#二进制-和-十进制-间的转换" class="headerlink" title="二进制 和 十进制 间的转换"></a>二进制 和 十进制 间的转换</h4><ul>
+<li>最开始接触到的二进制转十进制用的是权值的方法，十进制转二进制用的是“除 2 取余 ”的方法，很长一段时间我也一直在使用这个方法</li>
+<li>现在用一种更为简单方便的方法：<pre class="line-numbers language-tex"><code class="language-tex">这种方法是我的老师教我的，确实简单方便
+现在以一个例子来体验这个方法：
+    二进制“10010010”用十进制如何表示：<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/%E7%9E%8E%E8%AF%B4%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80_02/01-%E4%BA%8C%E8%BD%AC%E5%8D%81-01.png" alt="二进制转十进制 "><br><img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/%E7%9E%8E%E8%AF%B4%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80_02/02-%E4%BA%8C%E8%BD%AC%E5%8D%81-02.png" alt="二进制转十进制 "><pre class="line-numbers language-tex"><code class="language-tex">而十进制转二进制则是二进制转十进制的反操作：<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/%E7%9E%8E%E8%AF%B4%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80_02/03-%E5%8D%81%E8%BD%AC%E4%BA%8C-03.png" alt="十进制转二进制"></li>
 </ul>
-<h3 id="它们的关系"><a href="#它们的关系" class="headerlink" title="它们的关系"></a>它们的关系</h3><h4 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h4><pre class="line-numbers language-tex"><code class="language-tex">    先来个案例：
-    有个小伙子叫阿麦，他要去考科目一，他去到了车管所，发现要考场的布局就像下面那张图一样<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p><img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/%E7%9E%8E%E8%AF%B4%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80_01/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%801.png" alt="案例图"></p>
-<pre class="line-numbers language-tex"><code class="language-tex">    阿麦首先要在休息区存放随身携带的物品，因为这时候考试区里面有人在考试，等待区又有满员了，于是他便在休息区等待考官的安排以进入待考区等待考试。[1]
-    过了一会，他发现等待区已经没人了，但是考官依然没让他进入待考区，他按捺不住，上前询问考官。
-    考官：“你是几点的考场？”
-    阿麦：“我是早上10点的。”
-    考官：“现在是早上8点的考场，你先回去休息区坐着等吧。”
-    阿麦看了看时间，现在才9点30，还没到10点，没办法，他只能回到休息区继续等待。
-    过了一会，时间到了，考官过来了，让休息区中，早上10点考场的人现在排队，依次进入待考区，因为阿麦排的比较靠后，所以进了待考区后，他依然需要等待。[2]
-    当代考区满后，考官把门关上，避免其他人再进入待考区，这时候，考官说了考试记录和注意事项之后，让待考区的人依次到前面刷身份证，等待考试座位的安排，拿到考试座位后即刻进入考场进行考试。
-    因为阿麦排在后面，所以需要等待前面的人进考场后才能去获取考试座位安排，虽然心里有些急，但还是得等着。[3]
-    眼看就要到他了，突然考官带进来一位孕妇，考官让她先进去考试，当她进入考场之后，考场人数满了，阿麦没办法只能继续等。[4]
-    又过了一会，有人考完走了，于是阿麦开开心心地刷身份证，拿了考试座位安排就进入考场考试去了。
-    考完之后，他又回到代考区，然后从待考区回到了休息区，取了个人物品之后，回学校去了。[5]
--------------------------------------------------------------------<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<pre class="line-numbers language-tex"><code class="language-tex">    分析：
-    [1] 阿麦要进入考场考试必须要先进入待考区
-    [2] 阿麦必须满足条件才能进入待考区
-    [3] 即使进了待考区，阿麦仍需排队
-    [4] 即使轮到阿麦进入考场，但遇到特殊情况，阿麦仍需往后排
-    [5] 阿麦考完试后要回到休息区，必须先回到待考区<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="三者的关系"><a href="#三者的关系" class="headerlink" title="三者的关系"></a>三者的关系</h4><pre class="line-numbers language-tex"><code class="language-tex">1、CPU就是案例中的考场
+<h4 id="二进制-和-八进制-间的转换"><a href="#二进制-和-八进制-间的转换" class="headerlink" title="二进制 和 八进制 间的转换"></a>二进制 和 八进制 间的转换</h4><ul>
+<li>“二进制 和 八进制” 的转换方式与 “二进制 和 十进制 ” 的转换方式是类似的，唯一不同的是，1位 八进制 对应 3位 二进制<pre class="line-numbers language-tex"><code class="language-tex">八进制 转换成 二进制 方法如下：<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/%E7%9E%8E%E8%AF%B4%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80_02/04-%E5%85%AB%E8%BF%9B%E5%88%B6%E5%92%8C%E4%BA%8C%E8%BF%9B%E5%88%B6%E7%9A%84%E8%BD%AC%E6%8D%A2.png" alt="八进制 转 二进制"></li>
+</ul>
+<pre class="line-numbers language-tex"><code class="language-tex">    二进制 转换成 八进制 方法如下：<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/%E7%9E%8E%E8%AF%B4%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80_02/05-%E4%BA%8C%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2%E6%88%90%E5%85%AB%E8%BF%9B%E5%88%B6.png" alt="二进制 转八进制"></p>
+<h4 id="二进制-和-十六进制-间的转换"><a href="#二进制-和-十六进制-间的转换" class="headerlink" title="二进制 和 十六进制 间的转换"></a>二进制 和 十六进制 间的转换</h4><ul>
+<li>“二进制 和 十六进制” 的转换方式与 “二进制 和 八进制 ” 的转换方式是类似的，唯一不同的是，1位 十六进制 对应 4位 二进制</li>
+<li>十六进制 如何表示<pre class="line-numbers language-tex"><code class="language-tex">我在前面说过，我们只有 0 - 9 十个数字，那么该用什么来表示十六进制 9 之后的数值呢？
+虽然我们只有十个数字，但我们还有 A - Z 26个英文字母呀，所以，人们便规定十六进制中，用字母 A - F 来表示 10（十） - 15（十五）
+至于为什么用英文字母？因为计算机是在使用英文的国家出生的，制度这个规则的那些人也是使用英文的人。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-tex"><code class="language-tex">十六进制 转换成 二进制 方法如下：<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/%E7%9E%8E%E8%AF%B4%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80_02/06-%E5%8D%81%E5%85%AD%E8%BD%AC2.png" alt="16转2"></li>
+</ul>
+<pre class="line-numbers language-tex"><code class="language-tex">    二进制 转换成 十六进制 方法如下：<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/%E7%9E%8E%E8%AF%B4%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80_02/07-%E4%BA%8C%E8%BD%AC%E5%8D%81%E5%85%AD.png" alt="2转16"></p>
+<h4 id="一直使用的那列数字究竟是什么"><a href="#一直使用的那列数字究竟是什么" class="headerlink" title="一直使用的那列数字究竟是什么"></a>一直使用的那列数字究竟是什么</h4><ul>
+<li><p>什么是字节（Byte）</p>
+<pre class="line-numbers language-tex"><code class="language-tex">计算机对数据最小的计量单位便是 字节 (Byte) ，而 1 B(Byte) = 8 Bit（位）
+字节和其它常用的计量单位间的转换关系为：
+    * 1024 B  = 1 KB
+    * 1024 KB = 1 MB
+    * 1024 MB = 1 GB
+    * 1024 GB = 1 TB
+  其中 1024 为 2^10（2 的 10次幂）<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>那列数字的含义</p>
+<pre class="line-numbers language-tex"><code class="language-tex">我们现在已经知道，1 B = 8 Bit
+现在我们再来数一数那一列数字有几个数字组成：
+    * 128  64  32  16  8  4  2  1
+我们可以发现，这列数字由 8 个数字组成。
 
-2、内存就是案例中的待考区
+唉？8 ，又是 8 ，那么，这两个 8 是不是有什么关系呢？
+是的，那一列数字的 和 其实就是 1 B 能表示的最大值
 
-3、硬盘就是案例中的休息区
+这时候，再观察一下，我们会发现：这是一个递增数列，从右往左，且 右边的值 是相邻的 左边的值 的 2 倍
+同时，它们与 2 还有其它联系：<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/%E7%9E%8E%E8%AF%B4%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80_02/08-%E7%A5%9E%E7%A7%98%E6%95%B0%E5%88%97%E7%9A%84%E7%A7%98%E5%AF%86.png" alt="神秘数列的秘密"></p>
+</li>
+</ul>
+<pre class="line-numbers language-tex"><code class="language-tex">    也就是：它们对应着 2 ^ n (2 的 n 次幂)，0 <= n <=7
 
-4、硬盘的数据要进入CPU，由CPU处理，就必须先进入内存（对应案例分析的[1]）
+    为什么是 2 ^ n 而不是 3 ^ n 、 10 ^ n ……呢？
 
-5、即使内存没有满，但硬盘的数据依然不能随意进入内存，需要满足一定条件才能进入内存，等待CPU的处理（对应案例分析的[2]）
+    回想以下我之前说的：计算机只有两种状态，因此人们规定用二进制来表示计算机的数据。就可以知道，之所以是 2 ^ n 而不是其它是因为计算机只认 “0” 和 “1”
 
-6、即使硬盘数据进入了内存，仍然需要排队（对应案例分析的[3]）
+    那为什么 0 <= n <=7 呢？
 
-7、即使轮到该数据进入CPU，由CPU处理，但如果有特殊情况（如系统安全等优先级较高的事件），该数据依然要往后排（对应案例分析的[4]）
-
-8、数据处理完后，若要回到硬盘，依然要经由内存，而不能直接回到硬盘
-
-9、由硬盘 到 内存 再到 CPU 的过程叫做读取
-
-9、由CPU 到 内存 再到 硬盘 的过程叫做写入
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+    再回想我之前说过的：我们有 10 个数字，但是，它们是从 0 开始的，而非从 1 开始。因此，这里便从 0 开始，而不是从 1 开始。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ul>
-<li>CPU就像军队中的指挥部，内存就像是通讯兵，硬盘就像营区。指挥部的指令不能直接下到基层士兵，基层士兵也不能直接向指挥部汇报，所以要有通讯兵来充当二者的桥梁</li>
-<li>计算机中，这三者是最常见的，比如买电脑的时候，所以我才写这篇文章，其它的关于计算机组成的知识，推荐去看书</li>
-<li>这篇文章在我想写的 二级系列 和 C 语言系列 中，都是第一篇，因为二级中涉及到的栈和队列等计算机基础知识，和 C 语言里面，指针、数组的知识，都需要对内存有一定了解，而内存又和CPU和硬盘无法分离，所以我就放一起了</li>
+<li>进制的转换常见于各种计算机相关的考试，就我来说，高中的会考、后来的计算机等级考试、软考、大学期末考试都会遇见</li>
+<li>进制的转换并不难，只要掌握了适合自己的方法，再看进制转换类的题目就像看 “1 + 1 = ？”一样简单</li>
+<li>进制的转换虽然不难，却很重要，是学习计算机的适合必不可少的一个知识点</li>
+<li>希望这篇文章能给你带来帮助</li>
 </ul>
 
             </div>
@@ -602,7 +594,7 @@ CPU有什么用 ">
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://mairf.cn/2019/12/22/xia-shuo-ji-suan-ji-ji-chu-01/">http://mairf.cn/2019/12/22/xia-shuo-ji-suan-ji-ji-chu-01/</a>
+                    <a href="http://mairf.cn/2019/12/31/xia-shuo-ji-suan-ji-ji-chu-02/">http://mairf.cn/2019/12/31/xia-shuo-ji-suan-ji-ji-chu-02/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -686,9 +678,10 @@ CPU有什么用 ">
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2019/12/31/xia-shuo-ji-suan-ji-ji-chu-02/">
                     <div class="card-image">
@@ -717,9 +710,9 @@ CPU有什么用 ">
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2019-12-31
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-12-31
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -732,6 +725,7 @@ CPU有什么用 ">
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -754,36 +748,43 @@ CPU有什么用 ">
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/11/25/ftp-fu-wu-qi-pei-zhi/">
+                <a href="/2019/12/22/xia-shuo-ji-suan-ji-ji-chu-01/">
                     <div class="card-image">
                         
-                        <img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/文章封面图/云_二进制码.jpg" class="responsive-img" alt="FTP服务器配置">
+                        <img src="https://raw.githubusercontent.com/getMai/PersonalWebsite_Image/master/文章封面图/抽象.png" class="responsive-img" alt="瞎说计算机基础_01 之 CPU、内存、硬盘间二三事">
                         
-                        <span class="card-title">FTP服务器配置</span>
+                        <span class="card-title">瞎说计算机基础_01 之 CPU、内存、硬盘间二三事</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            实验目的和要求实验目的
-掌握FTP服务器的配置
+                            前言文章内容
+什么是CPU
+什么是内存
+什么是硬盘
+它们的关系
 
-实验要求
-成功配置FTP服务器，并能使用其他主机访问FTP服务器，进行文件共享
+撰文目的
+记录自己学习计算机时候遇到的重要知识
 
-实验内容使用VMware + Windows Server 2008配置进行FTP服务器的配置使用实体机，使
+声明
+全文均为个人理解，重在笔记和理解，并不严谨，而且不保证绝对正确
+
+主体内容什么是CPUCPU长什么样
+CPU有什么用 
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-25
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-12-22
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/计算机网络基础/" class="post-category">
-                                    计算机网络基础
+                            <a href="/categories/计算机基础/" class="post-category">
+                                    计算机基础
                                 </a>
                             
                             
@@ -793,16 +794,12 @@ CPU有什么用 ">
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/计算机网络基础/">
-                        <span class="chip bg-color">计算机网络基础</span>
+                    <a href="/tags/瞎说/">
+                        <span class="chip bg-color">瞎说</span>
                     </a>
                     
-                    <a href="/tags/实验报告/">
-                        <span class="chip bg-color">实验报告</span>
-                    </a>
-                    
-                    <a href="/tags/FTP服务器配置/">
-                        <span class="chip bg-color">FTP服务器配置</span>
+                    <a href="/tags/计算机基础/">
+                        <span class="chip bg-color">计算机基础</span>
                     </a>
                     
                 </div>
